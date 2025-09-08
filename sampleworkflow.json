@@ -1,0 +1,110 @@
+{
+    "name": "Commercial Loan Application Workflow",
+    "description": "This is a workflow for processing commercial loan applications. It includes steps for validating the application, performing a credit check, and handling document uploads.",
+    "version": "1.0",
+    "data":{
+        "application_id": "APP_1752754546032_qfr1ta",
+        "business_info": {
+            "business_name": "Thompson",
+            "business_type": "llc",
+            "industry": "IT",
+            "years_in_business": 15,
+            "federal_tax_id": "12-3456789"
+        },
+        "contact_info": {
+            "contact_name": "Chris Thompson",
+            "contact_title": "Owner",
+            "email": "ckthompson00@live.com",
+            "phone": "555-555-5555"
+        },
+        "address_info": {
+            "address_line1": "1234 Main",
+            "address_line2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip_code": "12234"
+        },
+        "loan_info": {
+            "loan_amount": 100000,
+            "loan_purpose": "Equipment Purchase",
+            "loan_term": 60
+        },
+        "financial_info": {
+            "annual_revenue": 2400000,
+            "monthly_revenue": 20000,
+            "monthly_expenses": 18000,
+            "existing_debt": 100000,
+            "collateral_value": 99999
+        },
+        "document_references": [
+            {
+                "document_id": "doc_1752754523277_hqtmxazdw",
+                "original_filename": "Financial Statement.docx",
+                "hashed_filename": "Financial Statement.docx",
+                "file_size": 121344,
+                "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "document_type": "financial_statement",
+                "uploaded_at": "2025-07-17T12:15:23.291Z"
+            },
+            {
+                "document_id": "doc_1752754528154_8soiv5vo3",
+                "original_filename": "Loan Application Requirements.docx",
+                "hashed_filename": "Loan Application Requirements.docx",
+                "file_size": 15427,
+                "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "document_type": "tax_return",
+                "uploaded_at": "2025-07-17T12:15:28.166Z"
+            },
+            {
+                "document_id": "doc_1752754532532_gphsgowtj",
+                "original_filename": "ProcessDatabase.xlsx",
+                "hashed_filename": "ProcessDatabase.xlsx",
+                "file_size": 116224,
+                "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "document_type": "bank_statement",
+                "uploaded_at": "2025-07-17T12:15:32.545Z"
+            },
+            {
+                "document_id": "doc_1752754537732_4lr1d4zc7",
+                "original_filename": "Financial Statement.docx",
+                "hashed_filename": "Financial Statement.docx",
+                "file_size": 121344,
+                "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "document_type": "profit_loss",
+                "uploaded_at": "2025-07-17T12:15:37.744Z"
+            }
+        ],
+        "metadata": {
+            "status": "submitted",
+            "created_at": "2025-07-17T12:15:46.032Z",
+            "submitted_at": "2025-07-17T12:15:46.032Z"
+        }
+    },
+    "steps": [
+        {
+            "name": "Validate Loan Application",
+            "step": "1",
+            "description": "This step needs to perform a validation of the input data from the customer for the commercial loan application.",
+            "max_retires": "3",
+            "sla_minutes": "30",
+            "on_fail": "stop",
+            "fail_action": "troubleshooting_agent"
+        },
+        {
+            "name": "Credit Check",
+            "step": "2",
+            "description": "This step needs to perform a credit check on the customer.",
+            "max_retires": "3",
+            "sla_minutes": "30",
+            "on_fail": "skip"
+        },
+        {
+            "name": "Approval Request",
+            "step": "2",
+            "description": "Send an approval request and await a response.",
+            "max_retires": "3",
+            "sla_minutes": "30",
+            "on_fail": "stop"
+        }
+    ]
+}

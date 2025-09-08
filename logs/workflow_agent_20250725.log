@@ -1,0 +1,276 @@
+2025-07-25 16:01:41,443 - INFO - Request URL: 'https://cnt-cosmos-demo.documents.azure.com:443/'
+Request method: 'GET'
+Request headers:
+    'Cache-Control': 'no-cache'
+    'x-ms-version': 'REDACTED'
+    'x-ms-documentdb-query-iscontinuationexpected': 'REDACTED'
+    'x-ms-date': 'REDACTED'
+    'authorization': 'REDACTED'
+    'Accept': 'application/json'
+    'Content-Length': '0'
+    'User-Agent': 'azsdk-python-cosmos/4.9.0 Python/3.10.11 (Windows-10-10.0.26100-SP0)'
+No body was attached to the request
+2025-07-25 16:01:41,668 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json'
+    'Content-Location': 'REDACTED'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'x-ms-max-media-storage-usage-mb': 'REDACTED'
+    'x-ms-media-storage-usage-mb': 'REDACTED'
+    'x-ms-databaseaccount-consumed-mb': 'REDACTED'
+    'x-ms-databaseaccount-reserved-mb': 'REDACTED'
+    'x-ms-databaseaccount-provisioned-mb': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-gatewayversion': 'REDACTED'
+    'Date': 'Fri, 25 Jul 2025 21:01:41 GMT'
+2025-07-25 16:01:41,670 - INFO - Starting event-driven message listening...
+2025-07-25 16:01:41,757 - INFO - Connection state changed: None -> <ConnectionState.START: 0>
+2025-07-25 16:01:41,789 - INFO - Connection state changed: <ConnectionState.START: 0> -> <ConnectionState.HDR_SENT: 2>
+2025-07-25 16:01:41,789 - INFO - Connection state changed: <ConnectionState.HDR_SENT: 2> -> <ConnectionState.HDR_SENT: 2>
+2025-07-25 16:01:41,789 - INFO - Connection state changed: <ConnectionState.HDR_SENT: 2> -> <ConnectionState.OPEN_PIPE: 4>
+2025-07-25 16:01:41,789 - INFO - Session state changed: <SessionState.UNMAPPED: 0> -> <SessionState.BEGIN_SENT: 1>
+2025-07-25 16:01:41,789 - INFO - Link state changed: <LinkState.DETACHED: 0> -> <LinkState.ATTACH_SENT: 1>
+2025-07-25 16:01:41,789 - INFO - Management link receiver state changed: <LinkState.DETACHED: 0> -> <LinkState.ATTACH_SENT: 1>
+2025-07-25 16:01:41,789 - INFO - Link state changed: <LinkState.DETACHED: 0> -> <LinkState.ATTACH_SENT: 1>
+2025-07-25 16:01:41,789 - INFO - Management link sender state changed: <LinkState.DETACHED: 0> -> <LinkState.ATTACH_SENT: 1>
+2025-07-25 16:01:41,789 - INFO - Connection state changed: <ConnectionState.OPEN_PIPE: 4> -> <ConnectionState.OPEN_SENT: 7>
+2025-07-25 16:01:41,841 - INFO - Connection state changed: <ConnectionState.OPEN_SENT: 7> -> <ConnectionState.OPENED: 9>
+2025-07-25 16:01:41,895 - INFO - Session state changed: <SessionState.BEGIN_SENT: 1> -> <SessionState.MAPPED: 3>
+2025-07-25 16:01:41,959 - INFO - Link state changed: <LinkState.ATTACH_SENT: 1> -> <LinkState.ATTACHED: 3>
+2025-07-25 16:01:41,963 - INFO - Management link receiver state changed: <LinkState.ATTACH_SENT: 1> -> <LinkState.ATTACHED: 3>
+2025-07-25 16:01:42,026 - INFO - Link state changed: <LinkState.ATTACH_SENT: 1> -> <LinkState.ATTACHED: 3>
+2025-07-25 16:01:42,026 - INFO - Management link sender state changed: <LinkState.ATTACH_SENT: 1> -> <LinkState.ATTACHED: 3>
+2025-07-25 16:01:42,026 - INFO - CBS completed opening with status: <ManagementOpenResult.OK: 1>
+2025-07-25 16:01:42,273 - INFO - Link state changed: <LinkState.DETACHED: 0> -> <LinkState.ATTACH_SENT: 1>
+2025-07-25 16:01:42,284 - INFO - Link state changed: <LinkState.ATTACH_SENT: 1> -> <LinkState.ATTACHED: 3>
+2025-07-25 16:01:42,344 - INFO - Started listening for messages...
+2025-07-25 16:02:33,439 - INFO - Received message: {
+    "name": "Commercial Loan Application Workflow",
+    "description": "This is a workflow for processing commercial loan applications. It includes steps for validating the application, performing a credit check, and handling document uploads.",
+    "version": "1.0",
+    "data":{
+        "application_id": "APP_1752754546032_qfr1ta",
+        "business_info": {
+            "business_name": "Thompson",
+            "business_type": "llc",
+            "industry": "IT",
+            "years_in_business": 15,
+            "federal_tax_id": "12-3456789"
+        },
+        "contact_info": {
+            "contact_name": "Chris Thompson",
+            "contact_title": "Owner",
+            "email": "ckthompson00@live.com",
+            "phone": "555-555-5555"
+        },
+        "address_info": {
+            "address_line1": "1234 Main",
+            "address_line2": "",
+            "city": "Boston",
+            "state": "MA",
+            "zip_code": "12234"
+        },
+        "loan_info": {
+            "loan_amount": 100000,
+            "loan_purpose": "Equipment Purchase",
+            "loan_term": 60
+        },
+        "financial_info": {
+            "annual_revenue": 2400000,
+            "monthly_revenue": 20000,
+            "monthly_expenses": 18000,
+            "existing_debt": 100000,
+            "collateral_value": 99999
+        },
+        "document_references": [
+            {
+                "document_id": "doc_1752754523277_hqtmxazdw",
+                "original_filename": "Financial Statement.docx",
+                "hashed_filename": "Financial Statement.docx",
+                "file_size": 121344,
+                "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "document_type": "financial_statement",
+                "uploaded_at": "2025-07-17T12:15:23.291Z"
+            },
+            {
+                "document_id": "doc_1752754528154_8soiv5vo3",
+                "original_filename": "Loan Application Requirements.docx",
+                "hashed_filename": "Loan Application Requirements.docx",
+                "file_size": 15427,
+                "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "document_type": "tax_return",
+                "uploaded_at": "2025-07-17T12:15:28.166Z"
+            },
+            {
+                "document_id": "doc_1752754532532_gphsgowtj",
+                "original_filename": "ProcessDatabase.xlsx",
+                "hashed_filename": "ProcessDatabase.xlsx",
+                "file_size": 116224,
+                "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "document_type": "bank_statement",
+                "uploaded_at": "2025-07-17T12:15:32.545Z"
+            },
+            {
+                "document_id": "doc_1752754537732_4lr1d4zc7",
+                "original_filename": "Financial Statement.docx",
+                "hashed_filename": "Financial Statement.docx",
+                "file_size": 121344,
+                "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                "document_type": "profit_loss",
+                "uploaded_at": "2025-07-17T12:15:37.744Z"
+            }
+        ],
+        "metadata": {
+            "status": "submitted",
+            "created_at": "2025-07-17T12:15:46.032Z",
+            "submitted_at": "2025-07-17T12:15:46.032Z"
+        }
+    },
+    "steps": [
+        {
+            "name": "Validate Loan Application",
+            "step": "1",
+            "description": "This step needs to perform a validation of the input data from the customer for the commercial loan application.",
+            "max_retires": "3",
+            "sla_minutes": "30",
+            "on_fail": "stop",
+            "fail_action": "troubleshooting_agent"
+        },
+        {
+            "name": "Credit Check",
+            "step": "2",
+            "description": "This step needs to perform a credit check on the customer.",
+            "max_retires": "3",
+            "sla_minutes": "30",
+            "on_fail": "skip"
+        },
+        {
+            "name": "Approval Request",
+            "step": "2",
+            "description": "Send an approval request and await a response.",
+            "max_retires": "3",
+            "sla_minutes": "30",
+            "on_fail": "stop"
+        }
+    ]
+}
+2025-07-25 16:02:33,442 - INFO - Parsed message data: {'name': 'Commercial Loan Application Workflow', 'description': 'This is a workflow for processing commercial loan applications. It includes steps for validating the application, performing a credit check, and handling document uploads.', 'version': '1.0', 'data': {'application_id': 'APP_1752754546032_qfr1ta', 'business_info': {'business_name': 'Thompson', 'business_type': 'llc', 'industry': 'IT', 'years_in_business': 15, 'federal_tax_id': '12-3456789'}, 'contact_info': {'contact_name': 'Chris Thompson', 'contact_title': 'Owner', 'email': 'ckthompson00@live.com', 'phone': '555-555-5555'}, 'address_info': {'address_line1': '1234 Main', 'address_line2': '', 'city': 'Boston', 'state': 'MA', 'zip_code': '12234'}, 'loan_info': {'loan_amount': 100000, 'loan_purpose': 'Equipment Purchase', 'loan_term': 60}, 'financial_info': {'annual_revenue': 2400000, 'monthly_revenue': 20000, 'monthly_expenses': 18000, 'existing_debt': 100000, 'collateral_value': 99999}, 'document_references': [{'document_id': 'doc_1752754523277_hqtmxazdw', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'financial_statement', 'uploaded_at': '2025-07-17T12:15:23.291Z'}, {'document_id': 'doc_1752754528154_8soiv5vo3', 'original_filename': 'Loan Application Requirements.docx', 'hashed_filename': 'Loan Application Requirements.docx', 'file_size': 15427, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'tax_return', 'uploaded_at': '2025-07-17T12:15:28.166Z'}, {'document_id': 'doc_1752754532532_gphsgowtj', 'original_filename': 'ProcessDatabase.xlsx', 'hashed_filename': 'ProcessDatabase.xlsx', 'file_size': 116224, 'mime_type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'document_type': 'bank_statement', 'uploaded_at': '2025-07-17T12:15:32.545Z'}, {'document_id': 'doc_1752754537732_4lr1d4zc7', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'profit_loss', 'uploaded_at': '2025-07-17T12:15:37.744Z'}], 'metadata': {'status': 'submitted', 'created_at': '2025-07-17T12:15:46.032Z', 'submitted_at': '2025-07-17T12:15:46.032Z'}}, 'steps': [{'name': 'Validate Loan Application', 'step': '1', 'description': 'This step needs to perform a validation of the input data from the customer for the commercial loan application.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'stop', 'fail_action': 'troubleshooting_agent'}, {'name': 'Credit Check', 'step': '2', 'description': 'This step needs to perform a credit check on the customer.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'skip'}, {'name': 'Approval Request', 'step': '2', 'description': 'Send an approval request and await a response.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'stop'}]}
+2025-07-25 16:02:33,446 - INFO - Request URL: 'https://cnt-cosmos-demo-centralus.documents.azure.com:443/dbs/WorkflowDB/colls/Messages/'
+Request method: 'GET'
+Request headers:
+    'Cache-Control': 'no-cache'
+    'x-ms-version': 'REDACTED'
+    'x-ms-documentdb-query-iscontinuationexpected': 'REDACTED'
+    'x-ms-consistency-level': 'REDACTED'
+    'x-ms-date': 'REDACTED'
+    'authorization': 'REDACTED'
+    'Accept': 'application/json'
+    'Content-Length': '0'
+    'User-Agent': 'azsdk-python-cosmos/4.9.0 Python/3.10.11 (Windows-10-10.0.26100-SP0)'
+No body was attached to the request
+2025-07-25 16:02:33,614 - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json'
+    'Content-Location': 'REDACTED'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-activity-id': 'REDACTED'
+    'x-ms-last-state-change-utc': 'REDACTED'
+    'etag': '"00009b0f-0000-0300-0000-687bb4260000"'
+    'x-ms-schemaversion': 'REDACTED'
+    'collection-partition-index': 'REDACTED'
+    'collection-service-index': 'REDACTED'
+    'lsn': 'REDACTED'
+    'x-ms-request-charge': 'REDACTED'
+    'x-ms-alt-content-path': 'REDACTED'
+    'x-ms-content-path': 'REDACTED'
+    'x-ms-documentdb-partitionkeyrangeid': 'REDACTED'
+    'x-ms-xp-role': 'REDACTED'
+    'x-ms-global-Committed-lsn': 'REDACTED'
+    'x-ms-number-of-read-regions': 'REDACTED'
+    'x-ms-item-lsn': 'REDACTED'
+    'x-ms-transport-request-id': 'REDACTED'
+    'x-ms-cosmos-llsn': 'REDACTED'
+    'x-ms-cosmos-item-llsn': 'REDACTED'
+    'x-ms-session-token': 'REDACTED'
+    'x-ms-request-duration-ms': 'REDACTED'
+    'x-ms-serviceversion': 'REDACTED'
+    'x-ms-cosmos-physical-partition-id': 'REDACTED'
+    'x-ms-cosmos-max-content-length': 'REDACTED'
+    'x-ms-cosmos-internal-partition-id': 'REDACTED'
+    'x-ms-gatewayversion': 'REDACTED'
+    'Date': 'Fri, 25 Jul 2025 21:02:32 GMT'
+2025-07-25 16:02:33,636 - INFO - Request URL: 'https://cnt-cosmos-demo-centralus.documents.azure.com:443/dbs/WorkflowDB/colls/Messages/docs/'
+Request method: 'POST'
+Request headers:
+    'Cache-Control': 'no-cache'
+    'x-ms-version': 'REDACTED'
+    'x-ms-documentdb-query-iscontinuationexpected': 'REDACTED'
+    'x-ms-consistency-level': 'REDACTED'
+    'x-ms-session-token': 'REDACTED'
+    'x-ms-documentdb-partitionkey': 'REDACTED'
+    'x-ms-date': 'REDACTED'
+    'authorization': 'REDACTED'
+    'Content-Type': 'application/json'
+    'Accept': 'application/json'
+    'Content-Length': '3074'
+    'User-Agent': 'azsdk-python-cosmos/4.9.0 Python/3.10.11 (Windows-10-10.0.26100-SP0)'
+A body is sent with the request
+2025-07-25 16:02:33,728 - INFO - Response status: 201
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-activity-id': 'REDACTED'
+    'x-ms-last-state-change-utc': 'REDACTED'
+    'etag': '"4e00754f-0000-0300-0000-6883f0e90000"'
+    'x-ms-resource-quota': 'REDACTED'
+    'x-ms-resource-usage': 'REDACTED'
+    'x-ms-schemaversion': 'REDACTED'
+    'lsn': 'REDACTED'
+    'x-ms-request-charge': 'REDACTED'
+    'x-ms-alt-content-path': 'REDACTED'
+    'x-ms-content-path': 'REDACTED'
+    'x-ms-quorum-acked-lsn': 'REDACTED'
+    'x-ms-current-write-quorum': 'REDACTED'
+    'x-ms-current-replica-set-size': 'REDACTED'
+    'x-ms-documentdb-partitionkeyrangeid': 'REDACTED'
+    'x-ms-xp-role': 'REDACTED'
+    'x-ms-global-Committed-lsn': 'REDACTED'
+    'x-ms-number-of-read-regions': 'REDACTED'
+    'x-ms-transport-request-id': 'REDACTED'
+    'x-ms-cosmos-llsn': 'REDACTED'
+    'x-ms-cosmos-quorum-acked-llsn': 'REDACTED'
+    'x-ms-session-token': 'REDACTED'
+    'x-ms-request-duration-ms': 'REDACTED'
+    'x-ms-serviceversion': 'REDACTED'
+    'x-ms-cosmos-physical-partition-id': 'REDACTED'
+    'x-ms-cosmos-internal-partition-id': 'REDACTED'
+    'x-ms-gatewayversion': 'REDACTED'
+    'Date': 'Fri, 25 Jul 2025 21:02:32 GMT'
+2025-07-25 16:02:33,728 - INFO - Message successfully stored with document ID: 4978a38a-1d85-4984-a8d2-a0afe62a14e6
+2025-07-25 16:02:34,563 - INFO - Workflow record created: ID=4978a38a-1d85-4984-a8d2-a0afe62a14e6, Status=Initial, Current Step=1
+2025-07-25 16:02:34,684 - INFO - Message completed (removed from queue)
+2025-07-25 16:23:25,572 - INFO - Link state changed: <LinkState.ATTACHED: 3> -> <LinkState.DETACH_SENT: 4>
+2025-07-25 16:23:25,573 - INFO - Link state changed: <LinkState.ATTACHED: 3> -> <LinkState.DETACH_SENT: 4>
+2025-07-25 16:23:25,573 - INFO - Management link receiver state changed: <LinkState.ATTACHED: 3> -> <LinkState.DETACH_SENT: 4>
+2025-07-25 16:23:25,573 - INFO - Link state changed: <LinkState.ATTACHED: 3> -> <LinkState.DETACH_SENT: 4>
+2025-07-25 16:23:25,573 - INFO - Management link sender state changed: <LinkState.ATTACHED: 3> -> <LinkState.DETACH_SENT: 4>
+2025-07-25 16:23:25,574 - INFO - Session state changed: <SessionState.MAPPED: 3> -> <SessionState.END_SENT: 4>
+2025-07-25 16:23:25,574 - INFO - Connection state changed: <ConnectionState.OPENED: 9> -> <ConnectionState.CLOSE_SENT: 11>
+2025-07-25 16:23:25,575 - INFO - Connection state changed: <ConnectionState.CLOSE_SENT: 11> -> <ConnectionState.END: 13>
+2025-07-25 16:23:25,575 - INFO - Session state changed: <SessionState.END_SENT: 4> -> <SessionState.DISCARDING: 6>
+2025-07-25 16:23:25,575 - INFO - Link state changed: <LinkState.DETACH_SENT: 4> -> <LinkState.DETACHED: 0>
+2025-07-25 16:23:25,575 - INFO - Management link sender state changed: <LinkState.DETACH_SENT: 4> -> <LinkState.DETACHED: 0>
+2025-07-25 16:23:25,575 - INFO - Link state changed: <LinkState.DETACH_SENT: 4> -> <LinkState.DETACHED: 0>
+2025-07-25 16:23:25,575 - INFO - Management link receiver state changed: <LinkState.DETACH_SENT: 4> -> <LinkState.DETACHED: 0>
+2025-07-25 16:23:25,575 - INFO - Link state changed: <LinkState.DETACH_SENT: 4> -> <LinkState.DETACHED: 0>

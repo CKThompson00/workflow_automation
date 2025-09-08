@@ -1,0 +1,425 @@
+2025-07-25 16:05:27,174 - __main__ - INFO - Starting orchestrator agent...
+2025-07-25 16:05:27,175 - __main__ - INFO - Using Python executable: C:\data\repos\workflow_automation_agent\orchestrator_venv\Scripts\python.exe
+2025-07-25 16:05:27,175 - __main__ - INFO - Commercial Loan agent path: C:\data\repos\workflow_automation_agent\commercial_loan_agent.py
+2025-07-25 16:05:27,175 - __main__ - INFO - Status Logging agent path: C:\data\repos\workflow_automation_agent\status_logging_agent.py
+2025-07-25 16:05:27,175 - __main__ - INFO - Attempting to connect to Commercial Loan MCP plugin...
+2025-07-25 16:06:07,893 - semantic_kernel.connectors.mcp - DEBUG - Connected to MCP server: <mcp.client.session.ClientSession object at 0x000001D8B7999550>
+2025-07-25 16:06:07,900 - semantic_kernel.connectors.mcp - DEBUG - List of tools: [Tool(name='CommercialLoanAgent', title=None, description='Process and validate commercial loan applications. Use the validate_application function to check if applications contain required information.  Use the get_credit_score to return a credit score for the applicant.', inputSchema={'type': 'object', 'properties': {'messages': {'anyOf': [{'type': 'string', 'description': 'The user messages for the agent.'}, {'type': 'object', 'description': 'The user messages for the agent.'}]}, 'instructions_override': {'type': 'string', 'description': 'Override agent instructions.'}}, 'required': ['messages']}, outputSchema=None, annotations=None, meta=None)]
+2025-07-25 16:06:07,910 - semantic_kernel.connectors.mcp - DEBUG - Log level set to debug
+2025-07-25 16:06:14,125 - semantic_kernel.connectors.mcp - DEBUG - Connected to MCP server: <mcp.client.session.ClientSession object at 0x000001D8B79865D0>
+2025-07-25 16:06:14,128 - semantic_kernel.connectors.mcp - DEBUG - List of tools: [Tool(name='StatusLoggingAgent', title=None, description='Write status for workflow steps. Use the log_step function to log a step status.', inputSchema={'type': 'object', 'properties': {'messages': {'anyOf': [{'type': 'string', 'description': 'The user messages for the agent.'}, {'type': 'object', 'description': 'The user messages for the agent.'}]}, 'instructions_override': {'type': 'string', 'description': 'Override agent instructions.'}}, 'required': ['messages']}, outputSchema=None, annotations=None, meta=None)]
+2025-07-25 16:06:14,134 - semantic_kernel.connectors.mcp - DEBUG - Log level set to debug
+2025-07-25 16:06:14,134 - __main__ - INFO - Successfully connected to status logging agent and Commmercial Loan Agent via MCP
+2025-07-25 16:06:14,802 - __main__ - INFO - ChatCompletionAgent created with commercial loan plugin
+2025-07-25 16:06:14,802 - __main__ - INFO - Starting interactive chat loop. Type 'exit' to quit.
+2025-07-25 16:06:16,782 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://cnt-cosmos-demo.documents.azure.com:443/'
+Request method: 'GET'
+Request headers:
+    'Cache-Control': 'no-cache'
+    'x-ms-version': 'REDACTED'
+    'x-ms-documentdb-query-iscontinuationexpected': 'REDACTED'
+    'x-ms-date': 'REDACTED'
+    'authorization': 'REDACTED'
+    'Accept': 'application/json'
+    'Content-Length': '0'
+    'User-Agent': 'azsdk-python-cosmos/4.9.0 Python/3.13.5 (Windows-11-10.0.26100-SP0)'
+No body was attached to the request
+2025-07-25 16:06:17,014 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json'
+    'Content-Location': 'REDACTED'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'x-ms-max-media-storage-usage-mb': 'REDACTED'
+    'x-ms-media-storage-usage-mb': 'REDACTED'
+    'x-ms-databaseaccount-consumed-mb': 'REDACTED'
+    'x-ms-databaseaccount-reserved-mb': 'REDACTED'
+    'x-ms-databaseaccount-provisioned-mb': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-gatewayversion': 'REDACTED'
+    'Date': 'Fri, 25 Jul 2025 21:06:17 GMT'
+2025-07-25 16:06:17,016 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://cnt-cosmos-demo-centralus.documents.azure.com:443/dbs/WorkflowDB/colls/Messages/docs/'
+Request method: 'POST'
+Request headers:
+    'Cache-Control': 'no-cache'
+    'x-ms-version': 'REDACTED'
+    'x-ms-documentdb-query-iscontinuationexpected': 'REDACTED'
+    'x-ms-consistency-level': 'REDACTED'
+    'x-ms-documentdb-isquery': 'REDACTED'
+    'Content-Type': 'application/query+json'
+    'x-ms-session-token': 'REDACTED'
+    'x-ms-documentdb-query-enablecrosspartition': 'REDACTED'
+    'x-ms-date': 'REDACTED'
+    'authorization': 'REDACTED'
+    'Accept': 'application/json'
+    'x-ms-cosmos-correlated-activityid': 'REDACTED'
+    'Content-Length': '89'
+    'User-Agent': 'azsdk-python-cosmos/4.9.0 Python/3.13.5 (Windows-11-10.0.26100-SP0)'
+A body is sent with the request
+2025-07-25 16:06:17,243 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-activity-id': 'REDACTED'
+    'x-ms-last-state-change-utc': 'REDACTED'
+    'x-ms-resource-quota': 'REDACTED'
+    'x-ms-resource-usage': 'REDACTED'
+    'x-ms-schemaversion': 'REDACTED'
+    'lsn': 'REDACTED'
+    'x-ms-item-count': 'REDACTED'
+    'x-ms-request-charge': 'REDACTED'
+    'x-ms-alt-content-path': 'REDACTED'
+    'x-ms-content-path': 'REDACTED'
+    'x-ms-documentdb-partitionkeyrangeid': 'REDACTED'
+    'x-ms-xp-role': 'REDACTED'
+    'x-ms-cosmos-query-execution-info': 'REDACTED'
+    'x-ms-global-Committed-lsn': 'REDACTED'
+    'x-ms-number-of-read-regions': 'REDACTED'
+    'x-ms-transport-request-id': 'REDACTED'
+    'x-ms-cosmos-llsn': 'REDACTED'
+    'x-ms-session-token': 'REDACTED'
+    'x-ms-request-duration-ms': 'REDACTED'
+    'x-ms-serviceversion': 'REDACTED'
+    'x-ms-cosmos-is-partition-key-delete-pending': 'REDACTED'
+    'x-ms-cosmos-physical-partition-id': 'REDACTED'
+    'x-ms-cosmos-internal-partition-id': 'REDACTED'
+    'x-ms-gatewayversion': 'REDACTED'
+    'Date': 'Fri, 25 Jul 2025 21:06:17 GMT'
+2025-07-25 16:06:17,279 - __main__ - INFO - Retrieved JSON document for workflow_id 895b8a40-25eb-4936-a73b-7ca78b197612: {'id': '895b8a40-25eb-4936-a73b-7ca78b197612', 'partitionKey': '895b8a40-25eb-4936-a73b-7ca78b197612', 'messageData': {'name': 'Commercial Loan Application Workflow', 'description': 'This is a workflow for processing commercial loan applications. It includes steps for validating the application, performing a credit check, and handling document uploads.', 'version': '1.0', 'data': {'application_id': 'APP_1752754546032_qfr1ta', 'business_info': {'business_name': 'Thompson', 'business_type': 'llc', 'industry': 'IT', 'years_in_business': 15, 'federal_tax_id': '12-3456789'}, 'contact_info': {'contact_name': 'Chris Thompson', 'contact_title': 'Owner', 'email': 'ckthompson00@live.com', 'phone': '555-555-5555'}, 'address_info': {'address_line1': '1234 Main', 'address_line2': '', 'city': 'Boston', 'state': 'MA', 'zip_code': '12234'}, 'loan_info': {'loan_amount': 100000, 'loan_purpose': 'Equipment Purchase', 'loan_term': 60}, 'financial_info': {'annual_revenue': 2400000, 'monthly_revenue': 20000, 'monthly_expenses': 18000, 'existing_debt': 100000, 'collateral_value': 99999}, 'document_references': [{'document_id': 'doc_1752754523277_hqtmxazdw', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'financial_statement', 'uploaded_at': '2025-07-17T12:15:23.291Z'}, {'document_id': 'doc_1752754528154_8soiv5vo3', 'original_filename': 'Loan Application Requirements.docx', 'hashed_filename': 'Loan Application Requirements.docx', 'file_size': 15427, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'tax_return', 'uploaded_at': '2025-07-17T12:15:28.166Z'}, {'document_id': 'doc_1752754532532_gphsgowtj', 'original_filename': 'ProcessDatabase.xlsx', 'hashed_filename': 'ProcessDatabase.xlsx', 'file_size': 116224, 'mime_type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'document_type': 'bank_statement', 'uploaded_at': '2025-07-17T12:15:32.545Z'}, {'document_id': 'doc_1752754537732_4lr1d4zc7', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'profit_loss', 'uploaded_at': '2025-07-17T12:15:37.744Z'}], 'metadata': {'status': 'submitted', 'created_at': '2025-07-17T12:15:46.032Z', 'submitted_at': '2025-07-17T12:15:46.032Z'}}, 'steps': [{'name': 'Validate Loan Application', 'step': '1', 'description': 'This step needs to perform a validation of the input data from the customer for the commercial loan application.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'stop', 'fail_action': 'troubleshooting_agent'}, {'name': 'Credit Check', 'step': '2', 'description': 'This step needs to perform a credit check on the customer.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'skip'}]}, 'receivedTimestamp': '2025-07-20T05:25:00Z', '_rid': '0SMdAM7u8LcHAAAAAAAAAA==', '_self': 'dbs/0SMdAA==/colls/0SMdAM7u8Lc=/docs/0SMdAM7u8LcHAAAAAAAAAA==/', '_etag': '"0900b816-0000-0300-0000-687e41890000"', '_attachments': 'attachments/', '_ts': 1753104777}
+2025-07-25 16:06:17,280 - __main__ - INFO - User input: {'id': '895b8a40-25eb-4936-a73b-7ca78b197612', 'partitionKey': '895b8a40-25eb-4936-a73b-7ca78b197612', 'messageData': {'name': 'Commercial Loan Application Workflow', 'description': 'This is a workflow for processing commercial loan applications. It includes steps for validating the application, performing a credit check, and handling document uploads.', 'version': '1.0', 'data': {'application_id': 'APP_1752754546032_qfr1ta', 'business_info': {'business_name': 'Thompson', 'business_type': 'llc', 'industry': 'IT', 'years_in_business': 15, 'federal_tax_id': '12-3456789'}, 'contact_info': {'contact_name': 'Chris Thompson', 'contact_title': 'Owner', 'email': 'ckthompson00@live.com', 'phone': '555-555-5555'}, 'address_info': {'address_line1': '1234 Main', 'address_line2': '', 'city': 'Boston', 'state': 'MA', 'zip_code': '12234'}, 'loan_info': {'loan_amount': 100000, 'loan_purpose': 'Equipment Purchase', 'loan_term': 60}, 'financial_info': {'annual_revenue': 2400000, 'monthly_revenue': 20000, 'monthly_expenses': 18000, 'existing_debt': 100000, 'collateral_value': 99999}, 'document_references': [{'document_id': 'doc_1752754523277_hqtmxazdw', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'financial_statement', 'uploaded_at': '2025-07-17T12:15:23.291Z'}, {'document_id': 'doc_1752754528154_8soiv5vo3', 'original_filename': 'Loan Application Requirements.docx', 'hashed_filename': 'Loan Application Requirements.docx', 'file_size': 15427, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'tax_return', 'uploaded_at': '2025-07-17T12:15:28.166Z'}, {'document_id': 'doc_1752754532532_gphsgowtj', 'original_filename': 'ProcessDatabase.xlsx', 'hashed_filename': 'ProcessDatabase.xlsx', 'file_size': 116224, 'mime_type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'document_type': 'bank_statement', 'uploaded_at': '2025-07-17T12:15:32.545Z'}, {'document_id': 'doc_1752754537732_4lr1d4zc7', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'profit_loss', 'uploaded_at': '2025-07-17T12:15:37.744Z'}], 'metadata': {'status': 'submitted', 'created_at': '2025-07-17T12:15:46.032Z', 'submitted_at': '2025-07-17T12:15:46.032Z'}}, 'steps': [{'name': 'Validate Loan Application', 'step': '1', 'description': 'This step needs to perform a validation of the input data from the customer for the commercial loan application.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'stop', 'fail_action': 'troubleshooting_agent'}, {'name': 'Credit Check', 'step': '2', 'description': 'This step needs to perform a credit check on the customer.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'skip'}]}, 'receivedTimestamp': '2025-07-20T05:25:00Z', '_rid': '0SMdAM7u8LcHAAAAAAAAAA==', '_self': 'dbs/0SMdAA==/colls/0SMdAM7u8Lc=/docs/0SMdAM7u8LcHAAAAAAAAAA==/', '_etag': '"0900b816-0000-0300-0000-687e41890000"', '_attachments': 'attachments/', '_ts': 1753104777}
+2025-07-25 16:06:17,280 - __main__ - INFO - Invoking agent to process user request...
+2025-07-25 16:06:22,964 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:22,978 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=325, prompt_tokens=1555, total_tokens=1880, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:22,979 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 2 tool calls in parallel.
+2025-07-25 16:06:22,980 - semantic_kernel.kernel - INFO - Calling CommercialLoan-CommercialLoanAgent function with args: {"messages": "Validate the commercial loan application input data for application_id: APP_1752754546032_qfr1ta."}
+2025-07-25 16:06:22,988 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoan-CommercialLoanAgent invoking.
+2025-07-25 16:06:22,990 - semantic_kernel.kernel - INFO - Calling StatusLogging-StatusLoggingAgent function with args: {"messages": "Step 1: Validate Loan Application - Executing validation for application_id: APP_1752754546032_qfr1ta."}
+2025-07-25 16:06:22,991 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent invoking.
+2025-07-25 16:06:23,035 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': 'Step 1: Validate Loan Application - Executing validation for application_id: APP_1752754546032_qfr1ta.'})
+2025-07-25 16:06:23,038 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('CommercialLoanAgent', {'messages': 'Validate the commercial loan application input data for application_id: APP_1752754546032_qfr1ta.'})
+2025-07-25 16:06:26,048 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoan-CommercialLoanAgent succeeded.
+2025-07-25 16:06:26,048 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 3.059813s
+2025-07-25 16:06:26,197 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent succeeded.
+2025-07-25 16:06:26,198 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 3.206772s
+2025-07-25 16:06:28,191 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:28,193 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=111, prompt_tokens=1931, total_tokens=2042, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:28,194 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 2 tool calls in parallel.
+2025-07-25 16:06:28,195 - semantic_kernel.kernel - INFO - Calling CommercialLoan-CommercialLoanAgent function with args: {"messages": "Perform a credit check for the customer with application_id: APP_1752754546032_qfr1ta."}
+2025-07-25 16:06:28,198 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoan-CommercialLoanAgent invoking.
+2025-07-25 16:06:28,199 - semantic_kernel.kernel - INFO - Calling StatusLogging-StatusLoggingAgent function with args: {"messages": "Step 1: Validate Loan Application - Completed successfully for application_id: APP_1752754546032_qfr1ta. Proceeding to Step 2: Credit Check."}
+2025-07-25 16:06:28,200 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent invoking.
+2025-07-25 16:06:28,222 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': 'Step 1: Validate Loan Application - Completed successfully for application_id: APP_1752754546032_qfr1ta. Proceeding to Step 2: Credit Check.'})
+2025-07-25 16:06:28,223 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('CommercialLoanAgent', {'messages': 'Perform a credit check for the customer with application_id: APP_1752754546032_qfr1ta.'})
+2025-07-25 16:06:29,620 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoan-CommercialLoanAgent succeeded.
+2025-07-25 16:06:29,620 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.421302s
+2025-07-25 16:06:30,060 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent succeeded.
+2025-07-25 16:06:30,060 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.859389s
+2025-07-25 16:06:31,167 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:31,170 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=49, prompt_tokens=2296, total_tokens=2345, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=1408))
+2025-07-25 16:06:31,170 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:06:31,171 - semantic_kernel.kernel - INFO - Calling StatusLogging-StatusLoggingAgent function with args: {"messages":"Step 2: Credit Check - Completed successfully for application_id: APP_1752754546032_qfr1ta. Credit score: 812."}
+2025-07-25 16:06:31,172 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent invoking.
+2025-07-25 16:06:31,191 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': 'Step 2: Credit Check - Completed successfully for application_id: APP_1752754546032_qfr1ta. Credit score: 812.'})
+2025-07-25 16:06:32,765 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent succeeded.
+2025-07-25 16:06:32,766 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.593244s
+2025-07-25 16:06:33,650 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:33,652 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=58, prompt_tokens=2427, total_tokens=2485, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=1920))
+2025-07-25 16:06:33,653 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:06:33,653 - semantic_kernel.kernel - INFO - Calling StatusLogging-StatusLoggingAgent function with args: {"messages":"Workflow 895b8a40-25eb-4936-a73b-7ca78b197612 has been completed successfully at Step 2. Current status updated to 'Completed'."}
+2025-07-25 16:06:33,654 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent invoking.
+2025-07-25 16:06:33,672 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': "Workflow 895b8a40-25eb-4936-a73b-7ca78b197612 has been completed successfully at Step 2. Current status updated to 'Completed'."})
+2025-07-25 16:06:36,156 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent succeeded.
+2025-07-25 16:06:36,156 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 2.502472s
+2025-07-25 16:06:38,194 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:38,197 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=149, prompt_tokens=2657, total_tokens=2806, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:38,198 - __main__ - INFO - Agent response received from PersonalAssistant
+2025-07-25 16:06:38,199 - __main__ - INFO - Cleaning up chat thread...
+2025-07-25 16:06:38,199 - __main__ - INFO - Chat thread cleanup completed
+2025-07-25 16:08:01,263 - __main__ - INFO - Starting orchestrator agent...
+2025-07-25 16:08:01,263 - __main__ - INFO - Using Python executable: C:\data\repos\workflow_automation_agent\orchestrator_venv\Scripts\python.exe
+2025-07-25 16:08:01,264 - __main__ - INFO - Commercial Loan agent path: C:\data\repos\workflow_automation_agent\commercial_loan_agent.py
+2025-07-25 16:08:01,264 - __main__ - INFO - Status Logging agent path: C:\data\repos\workflow_automation_agent\status_logging_agent.py
+2025-07-25 16:08:01,264 - __main__ - INFO - Attempting to connect to Commercial Loan MCP plugin...
+2025-07-25 16:08:08,940 - semantic_kernel.connectors.mcp - DEBUG - Connected to MCP server: <mcp.client.session.ClientSession object at 0x000002325D0C9550>
+2025-07-25 16:08:08,949 - semantic_kernel.connectors.mcp - DEBUG - List of tools: [Tool(name='CommercialLoanAgent', title=None, description='Process and validate commercial loan applications. Use the validate_application function to check if applications contain required information.  Use the get_credit_score to return a credit score for the applicant.', inputSchema={'type': 'object', 'properties': {'messages': {'anyOf': [{'type': 'string', 'description': 'The user messages for the agent.'}, {'type': 'object', 'description': 'The user messages for the agent.'}]}, 'instructions_override': {'type': 'string', 'description': 'Override agent instructions.'}}, 'required': ['messages']}, outputSchema=None, annotations=None, meta=None)]
+2025-07-25 16:08:08,961 - semantic_kernel.connectors.mcp - DEBUG - Log level set to debug
+2025-07-25 16:08:15,835 - semantic_kernel.connectors.mcp - DEBUG - Connected to MCP server: <mcp.client.session.ClientSession object at 0x000002325D0B25D0>
+2025-07-25 16:08:15,839 - semantic_kernel.connectors.mcp - DEBUG - List of tools: [Tool(name='StatusLoggingAgent', title=None, description='Write status for workflow steps. Use the log_step function to log a step status.', inputSchema={'type': 'object', 'properties': {'messages': {'anyOf': [{'type': 'string', 'description': 'The user messages for the agent.'}, {'type': 'object', 'description': 'The user messages for the agent.'}]}, 'instructions_override': {'type': 'string', 'description': 'Override agent instructions.'}}, 'required': ['messages']}, outputSchema=None, annotations=None, meta=None)]
+2025-07-25 16:08:15,844 - semantic_kernel.connectors.mcp - DEBUG - Log level set to debug
+2025-07-25 16:08:15,845 - __main__ - INFO - Successfully connected to status logging agent and Commmercial Loan Agent via MCP
+2025-07-25 16:08:16,738 - __main__ - INFO - ChatCompletionAgent created with commercial loan plugin
+2025-07-25 16:08:16,738 - __main__ - INFO - Starting interactive chat loop. Type 'exit' to quit.
+2025-07-25 16:08:17,590 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://cnt-cosmos-demo.documents.azure.com:443/'
+Request method: 'GET'
+Request headers:
+    'Cache-Control': 'no-cache'
+    'x-ms-version': 'REDACTED'
+    'x-ms-documentdb-query-iscontinuationexpected': 'REDACTED'
+    'x-ms-date': 'REDACTED'
+    'authorization': 'REDACTED'
+    'Accept': 'application/json'
+    'Content-Length': '0'
+    'User-Agent': 'azsdk-python-cosmos/4.9.0 Python/3.13.5 (Windows-11-10.0.26100-SP0)'
+No body was attached to the request
+2025-07-25 16:08:17,763 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json'
+    'Content-Location': 'REDACTED'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'x-ms-max-media-storage-usage-mb': 'REDACTED'
+    'x-ms-media-storage-usage-mb': 'REDACTED'
+    'x-ms-databaseaccount-consumed-mb': 'REDACTED'
+    'x-ms-databaseaccount-reserved-mb': 'REDACTED'
+    'x-ms-databaseaccount-provisioned-mb': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-gatewayversion': 'REDACTED'
+    'Date': 'Fri, 25 Jul 2025 21:08:17 GMT'
+2025-07-25 16:08:17,766 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://cnt-cosmos-demo-centralus.documents.azure.com:443/dbs/WorkflowDB/colls/Messages/docs/'
+Request method: 'POST'
+Request headers:
+    'Cache-Control': 'no-cache'
+    'x-ms-version': 'REDACTED'
+    'x-ms-documentdb-query-iscontinuationexpected': 'REDACTED'
+    'x-ms-consistency-level': 'REDACTED'
+    'x-ms-documentdb-isquery': 'REDACTED'
+    'Content-Type': 'application/query+json'
+    'x-ms-session-token': 'REDACTED'
+    'x-ms-documentdb-query-enablecrosspartition': 'REDACTED'
+    'x-ms-date': 'REDACTED'
+    'authorization': 'REDACTED'
+    'Accept': 'application/json'
+    'x-ms-cosmos-correlated-activityid': 'REDACTED'
+    'Content-Length': '89'
+    'User-Agent': 'azsdk-python-cosmos/4.9.0 Python/3.13.5 (Windows-11-10.0.26100-SP0)'
+A body is sent with the request
+2025-07-25 16:08:18,006 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-activity-id': 'REDACTED'
+    'x-ms-last-state-change-utc': 'REDACTED'
+    'x-ms-resource-quota': 'REDACTED'
+    'x-ms-resource-usage': 'REDACTED'
+    'x-ms-schemaversion': 'REDACTED'
+    'lsn': 'REDACTED'
+    'x-ms-item-count': 'REDACTED'
+    'x-ms-request-charge': 'REDACTED'
+    'x-ms-alt-content-path': 'REDACTED'
+    'x-ms-content-path': 'REDACTED'
+    'x-ms-documentdb-partitionkeyrangeid': 'REDACTED'
+    'x-ms-xp-role': 'REDACTED'
+    'x-ms-cosmos-query-execution-info': 'REDACTED'
+    'x-ms-global-Committed-lsn': 'REDACTED'
+    'x-ms-number-of-read-regions': 'REDACTED'
+    'x-ms-transport-request-id': 'REDACTED'
+    'x-ms-cosmos-llsn': 'REDACTED'
+    'x-ms-session-token': 'REDACTED'
+    'x-ms-request-duration-ms': 'REDACTED'
+    'x-ms-serviceversion': 'REDACTED'
+    'x-ms-cosmos-is-partition-key-delete-pending': 'REDACTED'
+    'x-ms-cosmos-physical-partition-id': 'REDACTED'
+    'x-ms-cosmos-internal-partition-id': 'REDACTED'
+    'x-ms-gatewayversion': 'REDACTED'
+    'Date': 'Fri, 25 Jul 2025 21:08:17 GMT'
+2025-07-25 16:08:18,008 - __main__ - INFO - Retrieved JSON document for workflow_id 895b8a40-25eb-4936-a73b-7ca78b197612: {'id': '895b8a40-25eb-4936-a73b-7ca78b197612', 'partitionKey': '895b8a40-25eb-4936-a73b-7ca78b197612', 'messageData': {'name': 'Commercial Loan Application Workflow', 'description': 'This is a workflow for processing commercial loan applications. It includes steps for validating the application, performing a credit check, and handling document uploads.', 'version': '1.0', 'data': {'application_id': 'APP_1752754546032_qfr1ta', 'business_info': {'business_name': 'Thompson', 'business_type': 'llc', 'industry': 'IT', 'years_in_business': 15, 'federal_tax_id': '12-3456789'}, 'contact_info': {'contact_name': 'Chris Thompson', 'contact_title': 'Owner', 'email': 'ckthompson00@live.com', 'phone': '555-555-5555'}, 'address_info': {'address_line1': '1234 Main', 'address_line2': '', 'city': 'Boston', 'state': 'MA', 'zip_code': '12234'}, 'loan_info': {'loan_amount': 100000, 'loan_purpose': 'Equipment Purchase', 'loan_term': 60}, 'financial_info': {'annual_revenue': 2400000, 'monthly_revenue': 20000, 'monthly_expenses': 18000, 'existing_debt': 100000, 'collateral_value': 99999}, 'document_references': [{'document_id': 'doc_1752754523277_hqtmxazdw', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'financial_statement', 'uploaded_at': '2025-07-17T12:15:23.291Z'}, {'document_id': 'doc_1752754528154_8soiv5vo3', 'original_filename': 'Loan Application Requirements.docx', 'hashed_filename': 'Loan Application Requirements.docx', 'file_size': 15427, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'tax_return', 'uploaded_at': '2025-07-17T12:15:28.166Z'}, {'document_id': 'doc_1752754532532_gphsgowtj', 'original_filename': 'ProcessDatabase.xlsx', 'hashed_filename': 'ProcessDatabase.xlsx', 'file_size': 116224, 'mime_type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'document_type': 'bank_statement', 'uploaded_at': '2025-07-17T12:15:32.545Z'}, {'document_id': 'doc_1752754537732_4lr1d4zc7', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'profit_loss', 'uploaded_at': '2025-07-17T12:15:37.744Z'}], 'metadata': {'status': 'submitted', 'created_at': '2025-07-17T12:15:46.032Z', 'submitted_at': '2025-07-17T12:15:46.032Z'}}, 'steps': [{'name': 'Validate Loan Application', 'step': '1', 'description': 'This step needs to perform a validation of the input data from the customer for the commercial loan application.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'stop', 'fail_action': 'troubleshooting_agent'}, {'name': 'Credit Check', 'step': '2', 'description': 'This step needs to perform a credit check on the customer.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'skip'}]}, 'receivedTimestamp': '2025-07-20T05:25:00Z', '_rid': '0SMdAM7u8LcHAAAAAAAAAA==', '_self': 'dbs/0SMdAA==/colls/0SMdAM7u8Lc=/docs/0SMdAM7u8LcHAAAAAAAAAA==/', '_etag': '"0900b816-0000-0300-0000-687e41890000"', '_attachments': 'attachments/', '_ts': 1753104777}
+2025-07-25 16:08:18,009 - __main__ - INFO - User input: {'id': '895b8a40-25eb-4936-a73b-7ca78b197612', 'partitionKey': '895b8a40-25eb-4936-a73b-7ca78b197612', 'messageData': {'name': 'Commercial Loan Application Workflow', 'description': 'This is a workflow for processing commercial loan applications. It includes steps for validating the application, performing a credit check, and handling document uploads.', 'version': '1.0', 'data': {'application_id': 'APP_1752754546032_qfr1ta', 'business_info': {'business_name': 'Thompson', 'business_type': 'llc', 'industry': 'IT', 'years_in_business': 15, 'federal_tax_id': '12-3456789'}, 'contact_info': {'contact_name': 'Chris Thompson', 'contact_title': 'Owner', 'email': 'ckthompson00@live.com', 'phone': '555-555-5555'}, 'address_info': {'address_line1': '1234 Main', 'address_line2': '', 'city': 'Boston', 'state': 'MA', 'zip_code': '12234'}, 'loan_info': {'loan_amount': 100000, 'loan_purpose': 'Equipment Purchase', 'loan_term': 60}, 'financial_info': {'annual_revenue': 2400000, 'monthly_revenue': 20000, 'monthly_expenses': 18000, 'existing_debt': 100000, 'collateral_value': 99999}, 'document_references': [{'document_id': 'doc_1752754523277_hqtmxazdw', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'financial_statement', 'uploaded_at': '2025-07-17T12:15:23.291Z'}, {'document_id': 'doc_1752754528154_8soiv5vo3', 'original_filename': 'Loan Application Requirements.docx', 'hashed_filename': 'Loan Application Requirements.docx', 'file_size': 15427, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'tax_return', 'uploaded_at': '2025-07-17T12:15:28.166Z'}, {'document_id': 'doc_1752754532532_gphsgowtj', 'original_filename': 'ProcessDatabase.xlsx', 'hashed_filename': 'ProcessDatabase.xlsx', 'file_size': 116224, 'mime_type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'document_type': 'bank_statement', 'uploaded_at': '2025-07-17T12:15:32.545Z'}, {'document_id': 'doc_1752754537732_4lr1d4zc7', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'profit_loss', 'uploaded_at': '2025-07-17T12:15:37.744Z'}], 'metadata': {'status': 'submitted', 'created_at': '2025-07-17T12:15:46.032Z', 'submitted_at': '2025-07-17T12:15:46.032Z'}}, 'steps': [{'name': 'Validate Loan Application', 'step': '1', 'description': 'This step needs to perform a validation of the input data from the customer for the commercial loan application.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'stop', 'fail_action': 'troubleshooting_agent'}, {'name': 'Credit Check', 'step': '2', 'description': 'This step needs to perform a credit check on the customer.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'skip'}]}, 'receivedTimestamp': '2025-07-20T05:25:00Z', '_rid': '0SMdAM7u8LcHAAAAAAAAAA==', '_self': 'dbs/0SMdAA==/colls/0SMdAM7u8Lc=/docs/0SMdAM7u8LcHAAAAAAAAAA==/', '_etag': '"0900b816-0000-0300-0000-687e41890000"', '_attachments': 'attachments/', '_ts': 1753104777}
+2025-07-25 16:08:18,010 - __main__ - INFO - Invoking agent to process user request...
+2025-07-25 16:08:21,884 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:21,892 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=235, prompt_tokens=1555, total_tokens=1790, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=1408))
+2025-07-25 16:08:21,894 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:08:21,895 - semantic_kernel.kernel - INFO - Calling CommercialLoan-CommercialLoanAgent function with args: {"messages":"Validate the application for the commercial loan with application_id 'APP_1752754546032_qfr1ta'. Please perform a validation of the input data from the customer."}
+2025-07-25 16:08:21,900 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoan-CommercialLoanAgent invoking.
+2025-07-25 16:08:21,937 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('CommercialLoanAgent', {'messages': "Validate the application for the commercial loan with application_id 'APP_1752754546032_qfr1ta'. Please perform a validation of the input data from the customer."})
+2025-07-25 16:08:24,757 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoan-CommercialLoanAgent succeeded.
+2025-07-25 16:08:24,757 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 2.856344s
+2025-07-25 16:08:25,800 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:25,803 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=56, prompt_tokens=1793, total_tokens=1849, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=1408))
+2025-07-25 16:08:25,804 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:08:25,805 - semantic_kernel.kernel - INFO - Calling StatusLogging-StatusLoggingAgent function with args: {"messages":"Step 1: Validate Loan Application has been successfully completed for workflow_id '895b8a40-25eb-4936-a73b-7ca78b197612'."}
+2025-07-25 16:08:25,806 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent invoking.
+2025-07-25 16:08:25,846 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': "Step 1: Validate Loan Application has been successfully completed for workflow_id '895b8a40-25eb-4936-a73b-7ca78b197612'."})
+2025-07-25 16:08:28,766 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent succeeded.
+2025-07-25 16:08:28,766 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 2.960044s
+2025-07-25 16:08:29,766 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:29,768 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=45, prompt_tokens=1993, total_tokens=2038, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=1792))
+2025-07-25 16:08:29,769 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:08:29,770 - semantic_kernel.kernel - INFO - Calling CommercialLoan-CommercialLoanAgent function with args: {"messages":"Perform a credit check for the commercial loan application with application_id 'APP_1752754546032_qfr1ta'."}
+2025-07-25 16:08:29,771 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoan-CommercialLoanAgent invoking.
+2025-07-25 16:08:29,789 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('CommercialLoanAgent', {'messages': "Perform a credit check for the commercial loan application with application_id 'APP_1752754546032_qfr1ta'."})
+2025-07-25 16:08:31,502 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoan-CommercialLoanAgent succeeded.
+2025-07-25 16:08:31,503 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.731697s
+2025-07-25 16:08:32,615 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:32,617 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=62, prompt_tokens=2168, total_tokens=2230, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=1408))
+2025-07-25 16:08:32,618 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:08:32,618 - semantic_kernel.kernel - INFO - Calling StatusLogging-StatusLoggingAgent function with args: {"messages":"Step 2: Credit Check has been successfully completed for workflow_id '895b8a40-25eb-4936-a73b-7ca78b197612'. The credit score obtained is 791."}
+2025-07-25 16:08:32,619 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent invoking.
+2025-07-25 16:08:32,627 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': "Step 2: Credit Check has been successfully completed for workflow_id '895b8a40-25eb-4936-a73b-7ca78b197612'. The credit score obtained is 791."})
+2025-07-25 16:08:34,585 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent succeeded.
+2025-07-25 16:08:34,586 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.966423s
+2025-07-25 16:08:35,578 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:35,581 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=53, prompt_tokens=2370, total_tokens=2423, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=2176))
+2025-07-25 16:08:35,582 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:08:35,582 - semantic_kernel.kernel - INFO - Calling StatusLogging-StatusLoggingAgent function with args: {"messages":"The workflow '895b8a40-25eb-4936-a73b-7ca78b197612' has been successfully completed. All steps are done."}
+2025-07-25 16:08:35,583 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent invoking.
+2025-07-25 16:08:35,596 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': "The workflow '895b8a40-25eb-4936-a73b-7ca78b197612' has been successfully completed. All steps are done."})
+2025-07-25 16:08:37,105 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent succeeded.
+2025-07-25 16:08:37,105 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.522083s
+2025-07-25 16:08:38,061 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:38,062 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=41, prompt_tokens=2409, total_tokens=2450, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:08:38,063 - __main__ - INFO - Agent response received from PersonalAssistant
+2025-07-25 16:08:38,063 - __main__ - INFO - Cleaning up chat thread...
+2025-07-25 16:08:38,063 - __main__ - INFO - Chat thread cleanup completed
+2025-07-25 16:20:22,841 - __main__ - INFO - Starting orchestrator agent...
+2025-07-25 16:20:22,842 - __main__ - INFO - Using Python executable: C:\data\repos\workflow_automation_agent\orchestrator_venv\Scripts\python.exe
+2025-07-25 16:20:22,843 - __main__ - INFO - Commercial Loan agent path: C:\data\repos\workflow_automation_agent\commercial_loan_agent.py
+2025-07-25 16:20:22,844 - __main__ - INFO - Status Logging agent path: C:\data\repos\workflow_automation_agent\status_logging_agent.py
+2025-07-25 16:20:22,844 - __main__ - INFO - Attempting to connect to Commercial Loan MCP plugin...
+2025-07-25 16:21:04,390 - semantic_kernel.connectors.mcp - DEBUG - Connected to MCP server: <mcp.client.session.ClientSession object at 0x000001E238B99550>
+2025-07-25 16:21:04,399 - semantic_kernel.connectors.mcp - DEBUG - List of tools: [Tool(name='CommercialLoanAgent', title=None, description='Process and validate commercial loan applications. Use the validate_application function to check if applications contain required information.  Use the get_credit_score to return a credit score for the applicant.', inputSchema={'type': 'object', 'properties': {'messages': {'anyOf': [{'type': 'string', 'description': 'The user messages for the agent.'}, {'type': 'object', 'description': 'The user messages for the agent.'}]}, 'instructions_override': {'type': 'string', 'description': 'Override agent instructions.'}}, 'required': ['messages']}, outputSchema=None, annotations=None, meta=None)]
+2025-07-25 16:21:04,414 - semantic_kernel.connectors.mcp - DEBUG - Log level set to debug
+2025-07-25 16:21:22,716 - semantic_kernel.connectors.mcp - DEBUG - Connected to MCP server: <mcp.client.session.ClientSession object at 0x000001E238B865D0>
+2025-07-25 16:21:22,719 - semantic_kernel.connectors.mcp - DEBUG - List of tools: [Tool(name='StatusLoggingAgent', title=None, description='Write status for workflow steps. Use the log_step function to log a step status.', inputSchema={'type': 'object', 'properties': {'messages': {'anyOf': [{'type': 'string', 'description': 'The user messages for the agent.'}, {'type': 'object', 'description': 'The user messages for the agent.'}]}, 'instructions_override': {'type': 'string', 'description': 'Override agent instructions.'}}, 'required': ['messages']}, outputSchema=None, annotations=None, meta=None)]
+2025-07-25 16:21:22,725 - semantic_kernel.connectors.mcp - DEBUG - Log level set to debug
+2025-07-25 16:21:22,725 - __main__ - INFO - Successfully connected to status logging agent and Commmercial Loan Agent via MCP
+2025-07-25 16:21:23,307 - __main__ - INFO - ChatCompletionAgent created with commercial loan plugin
+2025-07-25 16:21:23,307 - __main__ - INFO - Starting interactive chat loop. Type 'exit' to quit.
+2025-07-25 16:21:25,195 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://cnt-cosmos-demo.documents.azure.com:443/'
+Request method: 'GET'
+Request headers:
+    'Cache-Control': 'no-cache'
+    'x-ms-version': 'REDACTED'
+    'x-ms-documentdb-query-iscontinuationexpected': 'REDACTED'
+    'x-ms-date': 'REDACTED'
+    'authorization': 'REDACTED'
+    'Accept': 'application/json'
+    'Content-Length': '0'
+    'User-Agent': 'azsdk-python-cosmos/4.9.0 Python/3.13.5 (Windows-11-10.0.26100-SP0)'
+No body was attached to the request
+2025-07-25 16:21:25,378 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json'
+    'Content-Location': 'REDACTED'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'x-ms-max-media-storage-usage-mb': 'REDACTED'
+    'x-ms-media-storage-usage-mb': 'REDACTED'
+    'x-ms-databaseaccount-consumed-mb': 'REDACTED'
+    'x-ms-databaseaccount-reserved-mb': 'REDACTED'
+    'x-ms-databaseaccount-provisioned-mb': 'REDACTED'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-gatewayversion': 'REDACTED'
+    'Date': 'Fri, 25 Jul 2025 21:21:24 GMT'
+2025-07-25 16:21:25,382 - azure.core.pipeline.policies.http_logging_policy - INFO - Request URL: 'https://cnt-cosmos-demo-centralus.documents.azure.com:443/dbs/WorkflowDB/colls/Messages/docs/'
+Request method: 'POST'
+Request headers:
+    'Cache-Control': 'no-cache'
+    'x-ms-version': 'REDACTED'
+    'x-ms-documentdb-query-iscontinuationexpected': 'REDACTED'
+    'x-ms-consistency-level': 'REDACTED'
+    'x-ms-documentdb-isquery': 'REDACTED'
+    'Content-Type': 'application/query+json'
+    'x-ms-session-token': 'REDACTED'
+    'x-ms-documentdb-query-enablecrosspartition': 'REDACTED'
+    'x-ms-date': 'REDACTED'
+    'authorization': 'REDACTED'
+    'Accept': 'application/json'
+    'x-ms-cosmos-correlated-activityid': 'REDACTED'
+    'Content-Length': '89'
+    'User-Agent': 'azsdk-python-cosmos/4.9.0 Python/3.13.5 (Windows-11-10.0.26100-SP0)'
+A body is sent with the request
+2025-07-25 16:21:25,611 - azure.core.pipeline.policies.http_logging_policy - INFO - Response status: 200
+Response headers:
+    'Cache-Control': 'no-store, no-cache'
+    'Pragma': 'no-cache'
+    'Transfer-Encoding': 'chunked'
+    'Content-Type': 'application/json'
+    'Server': 'Microsoft-HTTPAPI/2.0'
+    'Strict-Transport-Security': 'REDACTED'
+    'x-ms-activity-id': 'REDACTED'
+    'x-ms-last-state-change-utc': 'REDACTED'
+    'x-ms-resource-quota': 'REDACTED'
+    'x-ms-resource-usage': 'REDACTED'
+    'x-ms-schemaversion': 'REDACTED'
+    'lsn': 'REDACTED'
+    'x-ms-item-count': 'REDACTED'
+    'x-ms-request-charge': 'REDACTED'
+    'x-ms-alt-content-path': 'REDACTED'
+    'x-ms-content-path': 'REDACTED'
+    'x-ms-documentdb-partitionkeyrangeid': 'REDACTED'
+    'x-ms-xp-role': 'REDACTED'
+    'x-ms-cosmos-query-execution-info': 'REDACTED'
+    'x-ms-global-Committed-lsn': 'REDACTED'
+    'x-ms-number-of-read-regions': 'REDACTED'
+    'x-ms-transport-request-id': 'REDACTED'
+    'x-ms-cosmos-llsn': 'REDACTED'
+    'x-ms-session-token': 'REDACTED'
+    'x-ms-request-duration-ms': 'REDACTED'
+    'x-ms-serviceversion': 'REDACTED'
+    'x-ms-cosmos-is-partition-key-delete-pending': 'REDACTED'
+    'x-ms-cosmos-physical-partition-id': 'REDACTED'
+    'x-ms-cosmos-internal-partition-id': 'REDACTED'
+    'x-ms-gatewayversion': 'REDACTED'
+    'Date': 'Fri, 25 Jul 2025 21:21:24 GMT'
+2025-07-25 16:21:25,613 - __main__ - INFO - Retrieved JSON document for workflow_id 895b8a40-25eb-4936-a73b-7ca78b197612: {'id': '895b8a40-25eb-4936-a73b-7ca78b197612', 'partitionKey': '895b8a40-25eb-4936-a73b-7ca78b197612', 'messageData': {'name': 'Commercial Loan Application Workflow', 'description': 'This is a workflow for processing commercial loan applications. It includes steps for validating the application, performing a credit check, and handling document uploads.', 'version': '1.0', 'data': {'application_id': 'APP_1752754546032_qfr1ta', 'business_info': {'business_name': 'Thompson', 'business_type': 'llc', 'industry': 'IT', 'years_in_business': 15, 'federal_tax_id': '12-3456789'}, 'contact_info': {'contact_name': 'Chris Thompson', 'contact_title': 'Owner', 'email': 'ckthompson00@live.com', 'phone': '555-555-5555'}, 'address_info': {'address_line1': '1234 Main', 'address_line2': '', 'city': 'Boston', 'state': 'MA', 'zip_code': '12234'}, 'loan_info': {'loan_amount': 100000, 'loan_purpose': 'Equipment Purchase', 'loan_term': 60}, 'financial_info': {'annual_revenue': 2400000, 'monthly_revenue': 20000, 'monthly_expenses': 18000, 'existing_debt': 100000, 'collateral_value': 99999}, 'document_references': [{'document_id': 'doc_1752754523277_hqtmxazdw', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'financial_statement', 'uploaded_at': '2025-07-17T12:15:23.291Z'}, {'document_id': 'doc_1752754528154_8soiv5vo3', 'original_filename': 'Loan Application Requirements.docx', 'hashed_filename': 'Loan Application Requirements.docx', 'file_size': 15427, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'tax_return', 'uploaded_at': '2025-07-17T12:15:28.166Z'}, {'document_id': 'doc_1752754532532_gphsgowtj', 'original_filename': 'ProcessDatabase.xlsx', 'hashed_filename': 'ProcessDatabase.xlsx', 'file_size': 116224, 'mime_type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'document_type': 'bank_statement', 'uploaded_at': '2025-07-17T12:15:32.545Z'}, {'document_id': 'doc_1752754537732_4lr1d4zc7', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'profit_loss', 'uploaded_at': '2025-07-17T12:15:37.744Z'}], 'metadata': {'status': 'submitted', 'created_at': '2025-07-17T12:15:46.032Z', 'submitted_at': '2025-07-17T12:15:46.032Z'}}, 'steps': [{'name': 'Validate Loan Application', 'step': '1', 'description': 'This step needs to perform a validation of the input data from the customer for the commercial loan application.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'stop', 'fail_action': 'troubleshooting_agent'}, {'name': 'Credit Check', 'step': '2', 'description': 'This step needs to perform a credit check on the customer.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'skip'}]}, 'receivedTimestamp': '2025-07-20T05:25:00Z', '_rid': '0SMdAM7u8LcHAAAAAAAAAA==', '_self': 'dbs/0SMdAA==/colls/0SMdAM7u8Lc=/docs/0SMdAM7u8LcHAAAAAAAAAA==/', '_etag': '"0900b816-0000-0300-0000-687e41890000"', '_attachments': 'attachments/', '_ts': 1753104777}
+2025-07-25 16:21:25,614 - __main__ - INFO - User input: {'id': '895b8a40-25eb-4936-a73b-7ca78b197612', 'partitionKey': '895b8a40-25eb-4936-a73b-7ca78b197612', 'messageData': {'name': 'Commercial Loan Application Workflow', 'description': 'This is a workflow for processing commercial loan applications. It includes steps for validating the application, performing a credit check, and handling document uploads.', 'version': '1.0', 'data': {'application_id': 'APP_1752754546032_qfr1ta', 'business_info': {'business_name': 'Thompson', 'business_type': 'llc', 'industry': 'IT', 'years_in_business': 15, 'federal_tax_id': '12-3456789'}, 'contact_info': {'contact_name': 'Chris Thompson', 'contact_title': 'Owner', 'email': 'ckthompson00@live.com', 'phone': '555-555-5555'}, 'address_info': {'address_line1': '1234 Main', 'address_line2': '', 'city': 'Boston', 'state': 'MA', 'zip_code': '12234'}, 'loan_info': {'loan_amount': 100000, 'loan_purpose': 'Equipment Purchase', 'loan_term': 60}, 'financial_info': {'annual_revenue': 2400000, 'monthly_revenue': 20000, 'monthly_expenses': 18000, 'existing_debt': 100000, 'collateral_value': 99999}, 'document_references': [{'document_id': 'doc_1752754523277_hqtmxazdw', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'financial_statement', 'uploaded_at': '2025-07-17T12:15:23.291Z'}, {'document_id': 'doc_1752754528154_8soiv5vo3', 'original_filename': 'Loan Application Requirements.docx', 'hashed_filename': 'Loan Application Requirements.docx', 'file_size': 15427, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'tax_return', 'uploaded_at': '2025-07-17T12:15:28.166Z'}, {'document_id': 'doc_1752754532532_gphsgowtj', 'original_filename': 'ProcessDatabase.xlsx', 'hashed_filename': 'ProcessDatabase.xlsx', 'file_size': 116224, 'mime_type': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'document_type': 'bank_statement', 'uploaded_at': '2025-07-17T12:15:32.545Z'}, {'document_id': 'doc_1752754537732_4lr1d4zc7', 'original_filename': 'Financial Statement.docx', 'hashed_filename': 'Financial Statement.docx', 'file_size': 121344, 'mime_type': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'document_type': 'profit_loss', 'uploaded_at': '2025-07-17T12:15:37.744Z'}], 'metadata': {'status': 'submitted', 'created_at': '2025-07-17T12:15:46.032Z', 'submitted_at': '2025-07-17T12:15:46.032Z'}}, 'steps': [{'name': 'Validate Loan Application', 'step': '1', 'description': 'This step needs to perform a validation of the input data from the customer for the commercial loan application.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'stop', 'fail_action': 'troubleshooting_agent'}, {'name': 'Credit Check', 'step': '2', 'description': 'This step needs to perform a credit check on the customer.', 'max_retires': '3', 'sla_minutes': '30', 'on_fail': 'skip'}]}, 'receivedTimestamp': '2025-07-20T05:25:00Z', '_rid': '0SMdAM7u8LcHAAAAAAAAAA==', '_self': 'dbs/0SMdAA==/colls/0SMdAM7u8Lc=/docs/0SMdAM7u8LcHAAAAAAAAAA==/', '_etag': '"0900b816-0000-0300-0000-687e41890000"', '_attachments': 'attachments/', '_ts': 1753104777}
+2025-07-25 16:21:25,615 - __main__ - INFO - Invoking agent to process user request...
+2025-07-25 16:21:30,387 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:30,396 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=247, prompt_tokens=1555, total_tokens=1802, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:21:30,397 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:21:30,398 - semantic_kernel.kernel - INFO - Calling CommercialLoan-CommercialLoanAgent function with args: {"messages":"Validate Loan Application: Check if the application contains required information for application_id: APP_1752754546032_qfr1ta."}
+2025-07-25 16:21:30,402 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoan-CommercialLoanAgent invoking.
+2025-07-25 16:21:30,432 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('CommercialLoanAgent', {'messages': 'Validate Loan Application: Check if the application contains required information for application_id: APP_1752754546032_qfr1ta.'})
+2025-07-25 16:21:32,987 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoan-CommercialLoanAgent succeeded.
+2025-07-25 16:21:32,988 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 2.585095s
+2025-07-25 16:21:33,815 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:33,816 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=35, prompt_tokens=1763, total_tokens=1798, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=1408))
+2025-07-25 16:21:33,816 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:21:33,817 - semantic_kernel.kernel - INFO - Calling StatusLogging-StatusLoggingAgent function with args: {"messages":"Step 1: Validate Loan Application - Successful. The application contains all required information."}
+2025-07-25 16:21:33,817 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent invoking.
+2025-07-25 16:21:33,837 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': 'Step 1: Validate Loan Application - Successful. The application contains all required information.'})
+2025-07-25 16:21:36,528 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent succeeded.
+2025-07-25 16:21:36,528 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 2.711267s
+2025-07-25 16:21:37,464 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:37,467 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=45, prompt_tokens=1888, total_tokens=1933, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=1408))
+2025-07-25 16:21:37,468 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:21:37,469 - semantic_kernel.kernel - INFO - Calling CommercialLoan-CommercialLoanAgent function with args: {"messages":"Credit Check: Perform a credit check on the customer associated with application_id APP_1752754546032_qfr1ta."}
+2025-07-25 16:21:37,470 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoan-CommercialLoanAgent invoking.
+2025-07-25 16:21:37,491 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('CommercialLoanAgent', {'messages': 'Credit Check: Perform a credit check on the customer associated with application_id APP_1752754546032_qfr1ta.'})
+2025-07-25 16:21:39,687 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoan-CommercialLoanAgent succeeded.
+2025-07-25 16:21:39,688 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 2.217956s
+2025-07-25 16:21:40,368 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:40,370 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=37, prompt_tokens=2071, total_tokens=2108, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=1792))
+2025-07-25 16:21:40,371 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:21:40,371 - semantic_kernel.kernel - INFO - Calling StatusLogging-StatusLoggingAgent function with args: {"messages":"Step 2: Credit Check - Successful. The credit score for the customer is 828."}
+2025-07-25 16:21:40,372 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent invoking.
+2025-07-25 16:21:40,392 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': 'Step 2: Credit Check - Successful. The credit score for the customer is 828.'})
+2025-07-25 16:21:42,046 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent succeeded.
+2025-07-25 16:21:42,047 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.674023s
+2025-07-25 16:21:42,935 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:42,936 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=37, prompt_tokens=2202, total_tokens=2239, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=2048))
+2025-07-25 16:21:42,937 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:21:42,937 - semantic_kernel.kernel - INFO - Calling StatusLogging-StatusLoggingAgent function with args: {"messages":"All steps completed successfully. Updating workflow status to 'Completed' and current step to 2."}
+2025-07-25 16:21:42,938 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent invoking.
+2025-07-25 16:21:42,949 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': "All steps completed successfully. Updating workflow status to 'Completed' and current step to 2."})
+2025-07-25 16:21:44,693 - semantic_kernel.functions.kernel_function - INFO - Function StatusLogging-StatusLoggingAgent succeeded.
+2025-07-25 16:21:44,694 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.755923s
+2025-07-25 16:21:45,782 - httpx - INFO - HTTP Request: POST https://admin-mdcj52z0-eastus2.cognitiveservices.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:45,785 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=55, prompt_tokens=2231, total_tokens=2286, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:21:45,787 - __main__ - INFO - Agent response received from PersonalAssistant
+2025-07-25 16:21:45,788 - __main__ - INFO - Cleaning up chat thread...
+2025-07-25 16:21:45,789 - __main__ - INFO - Chat thread cleanup completed

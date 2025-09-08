@@ -1,0 +1,205 @@
+2025-07-25 16:06:13,322 - __main__ - INFO - Commercial Loan Agent starting up...
+2025-07-25 16:06:13,323 - __main__ - INFO - Parsed arguments - transport: stdio, port: None
+2025-07-25 16:06:13,333 - __main__ - INFO - Starting Status Logging Agent with transport: stdio
+2025-07-25 16:06:13,333 - __main__ - INFO - Creating ChatCompletionAgent...
+2025-07-25 16:06:13,742 - __main__ - INFO - Creating MCP server from agent...
+2025-07-25 16:06:14,118 - __main__ - INFO - Starting STDIO server...
+2025-07-25 16:06:14,118 - __main__ - INFO - Setting up STDIO connection...
+2025-07-25 16:06:14,119 - __main__ - INFO - STDIO server ready, running MCP server...
+2025-07-25 16:06:14,127 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-07-25 16:06:14,130 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2025-07-25 16:06:14,132 - mcp.server.lowlevel.server - INFO - Processing request of type SetLevelRequest
+2025-07-25 16:06:14,132 - semantic_kernel.connectors.mcp - DEBUG - Log level set to debug
+2025-07-25 16:06:22,994 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:06:23,002 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': 'Step 1: Validate Loan Application - Executing validation for application_id: APP_1752754546032_qfr1ta.'})
+2025-07-25 16:06:23,006 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent invoking.
+2025-07-25 16:06:24,494 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:24,501 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=65, prompt_tokens=192, total_tokens=257, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:24,503 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:06:24,503 - semantic_kernel.kernel - INFO - Calling StatusLoggingPlugin-log_step function with args: {"step_status_comment":"Step 1: Executing validation for application_id: APP_1752754546032_qfr1ta.","step":1,"workflow_id":"APP_1752754546032_qfr1ta","status":"In Progress"}
+2025-07-25 16:06:24,506 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step invoking.
+2025-07-25 16:06:24,507 - __main__ - INFO - log_step called with step_status_comment: Step 1: Executing validation for application_id: APP_1752754546032_qfr1ta., step: 1, workflow_id: APP_1752754546032_qfr1ta, status: 
+2025-07-25 16:06:25,382 - __main__ - INFO - Workflow status logged successfully to the database.
+2025-07-25 16:06:25,507 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step succeeded.
+2025-07-25 16:06:25,509 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.001861s
+2025-07-25 16:06:26,189 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:26,191 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=35, prompt_tokens=268, total_tokens=303, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:26,193 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent succeeded.
+2025-07-25 16:06:26,193 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 3.186883s
+2025-07-25 16:06:28,204 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:06:28,209 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': 'Step 1: Validate Loan Application - Completed successfully for application_id: APP_1752754546032_qfr1ta. Proceeding to Step 2: Credit Check.'})
+2025-07-25 16:06:28,210 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent invoking.
+2025-07-25 16:06:29,091 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:29,093 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=76, prompt_tokens=201, total_tokens=277, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:29,094 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:06:29,095 - semantic_kernel.kernel - INFO - Calling StatusLoggingPlugin-log_step function with args: {"step_status_comment":"Step 1: Validate Loan Application completed successfully for application_id: APP_1752754546032_qfr1ta. Proceeding to Step 2: Credit Check.","step":1,"workflow_id":"APP_1752754546032_qfr1ta","status":"Successful"}
+2025-07-25 16:06:29,095 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step invoking.
+2025-07-25 16:06:29,097 - __main__ - INFO - log_step called with step_status_comment: Step 1: Validate Loan Application completed successfully for application_id: APP_1752754546032_qfr1ta. Proceeding to Step 2: Credit Check., step: 1, workflow_id: APP_1752754546032_qfr1ta, status: 
+2025-07-25 16:06:29,281 - __main__ - INFO - Workflow status logged successfully to the database.
+2025-07-25 16:06:29,405 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step succeeded.
+2025-07-25 16:06:29,406 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.308912s
+2025-07-25 16:06:30,052 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:30,055 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=43, prompt_tokens=288, total_tokens=331, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:30,056 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent succeeded.
+2025-07-25 16:06:30,057 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.846751s
+2025-07-25 16:06:31,175 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:06:31,181 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': 'Step 2: Credit Check - Completed successfully for application_id: APP_1752754546032_qfr1ta. Credit score: 812.'})
+2025-07-25 16:06:31,183 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent invoking.
+2025-07-25 16:06:31,922 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:31,923 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=52, prompt_tokens=196, total_tokens=248, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:31,924 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:06:31,924 - semantic_kernel.kernel - INFO - Calling StatusLoggingPlugin-log_step function with args: {"step_status_comment":"Credit check completed successfully. Credit score: 812.","step":2,"workflow_id":"APP_1752754546032_qfr1ta","status":"Successful"}
+2025-07-25 16:06:31,925 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step invoking.
+2025-07-25 16:06:31,925 - __main__ - INFO - log_step called with step_status_comment: Credit check completed successfully. Credit score: 812., step: 2, workflow_id: APP_1752754546032_qfr1ta, status: 
+2025-07-25 16:06:32,109 - __main__ - INFO - Workflow status logged successfully to the database.
+2025-07-25 16:06:32,230 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step succeeded.
+2025-07-25 16:06:32,230 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.304919s
+2025-07-25 16:06:32,759 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:32,761 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=19, prompt_tokens=259, total_tokens=278, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:32,762 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent succeeded.
+2025-07-25 16:06:32,762 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.578466s
+2025-07-25 16:06:33,656 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:06:33,664 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': "Workflow 895b8a40-25eb-4936-a73b-7ca78b197612 has been completed successfully at Step 2. Current status updated to 'Completed'."})
+2025-07-25 16:06:33,665 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent invoking.
+2025-07-25 16:06:34,742 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:34,745 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=131, prompt_tokens=204, total_tokens=335, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:34,746 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 2 tool calls in parallel.
+2025-07-25 16:06:34,747 - semantic_kernel.kernel - INFO - Calling StatusLoggingPlugin-log_step function with args: {"step_status_comment": "Step 2 completed successfully. Workflow has been marked as 'Completed'.", "step": 2, "workflow_id": "895b8a40-25eb-4936-a73b-7ca78b197612", "status": "Successful"}
+2025-07-25 16:06:34,747 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step invoking.
+2025-07-25 16:06:34,748 - __main__ - INFO - log_step called with step_status_comment: Step 2 completed successfully. Workflow has been marked as 'Completed'., step: 2, workflow_id: 895b8a40-25eb-4936-a73b-7ca78b197612, status: 
+2025-07-25 16:06:34,934 - __main__ - INFO - Workflow status logged successfully to the database.
+2025-07-25 16:06:35,056 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step succeeded.
+2025-07-25 16:06:35,056 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.308246s
+2025-07-25 16:06:35,057 - semantic_kernel.kernel - INFO - Calling StatusLoggingPlugin-update_workflow_status function with args: {"current_step": 2, "workflow_id": "895b8a40-25eb-4936-a73b-7ca78b197612", "status": "Successful"}
+2025-07-25 16:06:35,058 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-update_workflow_status invoking.
+2025-07-25 16:06:35,058 - __main__ - INFO - update_workflow called with current_step: 2, workflow_id: 895b8a40-25eb-4936-a73b-7ca78b197612, status: Successful
+2025-07-25 16:06:35,249 - __main__ - INFO - Workflow status updated successfully in the database.
+2025-07-25 16:06:35,370 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-update_workflow_status succeeded.
+2025-07-25 16:06:35,370 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.312212s
+2025-07-25 16:06:36,150 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:36,152 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=60, prompt_tokens=350, total_tokens=410, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:36,153 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent succeeded.
+2025-07-25 16:06:36,153 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 2.487724s
+2025-07-25 16:06:38,202 - __main__ - INFO - STDIO server completed
+2025-07-25 16:08:14,935 - __main__ - INFO - Commercial Loan Agent starting up...
+2025-07-25 16:08:14,936 - __main__ - INFO - Parsed arguments - transport: stdio, port: None
+2025-07-25 16:08:14,947 - __main__ - INFO - Starting Status Logging Agent with transport: stdio
+2025-07-25 16:08:14,947 - __main__ - INFO - Creating ChatCompletionAgent...
+2025-07-25 16:08:15,396 - __main__ - INFO - Creating MCP server from agent...
+2025-07-25 16:08:15,829 - __main__ - INFO - Starting STDIO server...
+2025-07-25 16:08:15,829 - __main__ - INFO - Setting up STDIO connection...
+2025-07-25 16:08:15,829 - __main__ - INFO - STDIO server ready, running MCP server...
+2025-07-25 16:08:15,837 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-07-25 16:08:15,840 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2025-07-25 16:08:15,843 - mcp.server.lowlevel.server - INFO - Processing request of type SetLevelRequest
+2025-07-25 16:08:15,843 - semantic_kernel.connectors.mcp - DEBUG - Log level set to debug
+2025-07-25 16:08:25,808 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:08:25,815 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': "Step 1: Validate Loan Application has been successfully completed for workflow_id '895b8a40-25eb-4936-a73b-7ca78b197612'."})
+2025-07-25 16:08:25,818 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent invoking.
+2025-07-25 16:08:27,058 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:27,066 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=57, prompt_tokens=202, total_tokens=259, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:08:27,067 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:08:27,068 - semantic_kernel.kernel - INFO - Calling StatusLoggingPlugin-log_step function with args: {"step_status_comment":"Validate Loan Application completed successfully.","step":1,"workflow_id":"895b8a40-25eb-4936-a73b-7ca78b197612","status":"Successful"}
+2025-07-25 16:08:27,072 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step invoking.
+2025-07-25 16:08:27,072 - __main__ - INFO - log_step called with step_status_comment: Validate Loan Application completed successfully., step: 1, workflow_id: 895b8a40-25eb-4936-a73b-7ca78b197612, status: 
+2025-07-25 16:08:27,886 - __main__ - INFO - Workflow status logged successfully to the database.
+2025-07-25 16:08:28,002 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step succeeded.
+2025-07-25 16:08:28,002 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.929709s
+2025-07-25 16:08:28,761 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:28,762 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=49, prompt_tokens=270, total_tokens=319, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:08:28,763 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent succeeded.
+2025-07-25 16:08:28,763 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 2.944300s
+2025-07-25 16:08:32,620 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:08:32,623 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': "Step 2: Credit Check has been successfully completed for workflow_id '895b8a40-25eb-4936-a73b-7ca78b197612'. The credit score obtained is 791."})
+2025-07-25 16:08:32,624 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent invoking.
+2025-07-25 16:08:33,516 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:33,518 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=63, prompt_tokens=209, total_tokens=272, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:08:33,519 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:08:33,520 - semantic_kernel.kernel - INFO - Calling StatusLoggingPlugin-log_step function with args: {"step_status_comment":"Credit Check completed successfully. Credit score obtained: 791.","step":2,"workflow_id":"895b8a40-25eb-4936-a73b-7ca78b197612","status":"Successful"}
+2025-07-25 16:08:33,521 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step invoking.
+2025-07-25 16:08:33,521 - __main__ - INFO - log_step called with step_status_comment: Credit Check completed successfully. Credit score obtained: 791., step: 2, workflow_id: 895b8a40-25eb-4936-a73b-7ca78b197612, status: 
+2025-07-25 16:08:33,699 - __main__ - INFO - Workflow status logged successfully to the database.
+2025-07-25 16:08:33,816 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step succeeded.
+2025-07-25 16:08:33,816 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.294831s
+2025-07-25 16:08:34,579 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:34,581 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=47, prompt_tokens=283, total_tokens=330, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:08:34,582 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent succeeded.
+2025-07-25 16:08:34,583 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.958727s
+2025-07-25 16:08:35,585 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:08:35,589 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': "The workflow '895b8a40-25eb-4936-a73b-7ca78b197612' has been successfully completed. All steps are done."})
+2025-07-25 16:08:35,590 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent invoking.
+2025-07-25 16:08:36,196 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:36,198 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=50, prompt_tokens=200, total_tokens=250, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:08:36,199 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:08:36,199 - semantic_kernel.kernel - INFO - Calling StatusLoggingPlugin-update_workflow_status function with args: {"current_step":0,"workflow_id":"895b8a40-25eb-4936-a73b-7ca78b197612","status":"Successful"}
+2025-07-25 16:08:36,200 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-update_workflow_status invoking.
+2025-07-25 16:08:36,200 - __main__ - INFO - update_workflow called with current_step: 0, workflow_id: 895b8a40-25eb-4936-a73b-7ca78b197612, status: Successful
+2025-07-25 16:08:36,374 - __main__ - INFO - Workflow status updated successfully in the database.
+2025-07-25 16:08:36,490 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-update_workflow_status succeeded.
+2025-07-25 16:08:36,491 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.290101s
+2025-07-25 16:08:37,101 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:37,103 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=40, prompt_tokens=263, total_tokens=303, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:08:37,104 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent succeeded.
+2025-07-25 16:08:37,104 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.512964s
+2025-07-25 16:08:38,064 - __main__ - INFO - STDIO server completed
+2025-07-25 16:21:20,834 - __main__ - INFO - Commercial Loan Agent starting up...
+2025-07-25 16:21:20,835 - __main__ - INFO - Parsed arguments - transport: stdio, port: None
+2025-07-25 16:21:20,856 - __main__ - INFO - Starting Status Logging Agent with transport: stdio
+2025-07-25 16:21:20,856 - __main__ - INFO - Creating ChatCompletionAgent...
+2025-07-25 16:21:21,950 - __main__ - INFO - Creating MCP server from agent...
+2025-07-25 16:21:22,709 - __main__ - INFO - Starting STDIO server...
+2025-07-25 16:21:22,709 - __main__ - INFO - Setting up STDIO connection...
+2025-07-25 16:21:22,709 - __main__ - INFO - STDIO server ready, running MCP server...
+2025-07-25 16:21:22,717 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-07-25 16:21:22,721 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2025-07-25 16:21:22,723 - mcp.server.lowlevel.server - INFO - Processing request of type SetLevelRequest
+2025-07-25 16:21:22,723 - semantic_kernel.connectors.mcp - DEBUG - Log level set to debug
+2025-07-25 16:21:33,819 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:21:33,822 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': 'Step 1: Validate Loan Application - Successful. The application contains all required information.'})
+2025-07-25 16:21:33,823 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent invoking.
+2025-07-25 16:21:34,943 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:34,951 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=41, prompt_tokens=182, total_tokens=223, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:21:34,952 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:21:34,953 - semantic_kernel.kernel - INFO - Calling StatusLoggingPlugin-log_step function with args: {"step_status_comment":"The application contains all required information.","step":1,"workflow_id":"{workflow_id}","status":"Successful"}
+2025-07-25 16:21:34,957 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step invoking.
+2025-07-25 16:21:34,958 - __main__ - INFO - log_step called with step_status_comment: The application contains all required information., step: 1, workflow_id: {workflow_id}, status: 
+2025-07-25 16:21:35,814 - __main__ - INFO - Workflow status logged successfully to the database.
+2025-07-25 16:21:35,929 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step succeeded.
+2025-07-25 16:21:35,930 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.972533s
+2025-07-25 16:21:36,520 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:36,523 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=23, prompt_tokens=234, total_tokens=257, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:21:36,525 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent succeeded.
+2025-07-25 16:21:36,525 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 2.701629s
+2025-07-25 16:21:40,376 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:21:40,383 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': 'Step 2: Credit Check - Successful. The credit score for the customer is 828.'})
+2025-07-25 16:21:40,384 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent invoking.
+2025-07-25 16:21:41,050 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:41,052 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=44, prompt_tokens=184, total_tokens=228, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:21:41,053 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:21:41,054 - semantic_kernel.kernel - INFO - Calling StatusLoggingPlugin-log_step function with args: {"step_status_comment":"Credit check completed successfully. The customer's credit score is 828.","step":2,"workflow_id":"2","status":"Successful"}
+2025-07-25 16:21:41,054 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step invoking.
+2025-07-25 16:21:41,055 - __main__ - INFO - log_step called with step_status_comment: Credit check completed successfully. The customer's credit score is 828., step: 2, workflow_id: 2, status: 
+2025-07-25 16:21:41,236 - __main__ - INFO - Workflow status logged successfully to the database.
+2025-07-25 16:21:41,351 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-log_step succeeded.
+2025-07-25 16:21:41,352 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.297201s
+2025-07-25 16:21:42,039 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:42,041 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=25, prompt_tokens=239, total_tokens=264, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:21:42,042 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent succeeded.
+2025-07-25 16:21:42,043 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.658109s
+2025-07-25 16:21:42,939 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:21:42,943 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('StatusLoggingAgent', {'messages': "All steps completed successfully. Updating workflow status to 'Completed' and current step to 2."})
+2025-07-25 16:21:42,944 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent invoking.
+2025-07-25 16:21:43,609 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:43,611 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=33, prompt_tokens=184, total_tokens=217, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:21:43,612 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:21:43,613 - semantic_kernel.kernel - INFO - Calling StatusLoggingPlugin-update_workflow_status function with args: {"current_step":2,"workflow_id":"[workflow_id]","status":"Successful"}
+2025-07-25 16:21:43,613 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-update_workflow_status invoking.
+2025-07-25 16:21:43,614 - __main__ - INFO - update_workflow called with current_step: 2, workflow_id: [workflow_id], status: Successful
+2025-07-25 16:21:43,789 - __main__ - INFO - Workflow status updated successfully in the database.
+2025-07-25 16:21:43,905 - semantic_kernel.functions.kernel_function - INFO - Function StatusLoggingPlugin-update_workflow_status succeeded.
+2025-07-25 16:21:43,905 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.291495s
+2025-07-25 16:21:44,687 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:44,689 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=43, prompt_tokens=230, total_tokens=273, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:21:44,690 - semantic_kernel.functions.kernel_function - INFO - Function mcp-StatusLoggingAgent succeeded.
+2025-07-25 16:21:44,690 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.746077s
+2025-07-25 16:21:45,792 - __main__ - INFO - STDIO server completed

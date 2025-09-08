@@ -1,0 +1,138 @@
+2025-07-25 16:06:01,924 - __main__ - INFO - Commercial Loan Agent starting up...
+2025-07-25 16:06:01,926 - __main__ - INFO - Parsed arguments - transport: stdio, port: None
+2025-07-25 16:06:01,946 - __main__ - INFO - Starting Commercial Loan Agent with transport: stdio
+2025-07-25 16:06:01,947 - __main__ - INFO - Creating ChatCompletionAgent...
+2025-07-25 16:06:03,355 - __main__ - INFO - Creating MCP server from agent...
+2025-07-25 16:06:07,871 - __main__ - INFO - Starting STDIO server...
+2025-07-25 16:06:07,872 - __main__ - INFO - Setting up STDIO connection...
+2025-07-25 16:06:07,877 - __main__ - INFO - STDIO server ready, running MCP server...
+2025-07-25 16:06:07,897 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-07-25 16:06:07,904 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2025-07-25 16:06:07,908 - mcp.server.lowlevel.server - INFO - Processing request of type SetLevelRequest
+2025-07-25 16:06:07,908 - semantic_kernel.connectors.mcp - DEBUG - Log level set to debug
+2025-07-25 16:06:22,994 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:06:23,003 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('CommercialLoanAgent', {'messages': 'Validate the commercial loan application input data for application_id: APP_1752754546032_qfr1ta.'})
+2025-07-25 16:06:23,007 - semantic_kernel.functions.kernel_function - INFO - Function mcp-CommercialLoanAgent invoking.
+2025-07-25 16:06:24,350 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:24,358 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=31, prompt_tokens=173, total_tokens=204, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:24,359 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:06:24,360 - semantic_kernel.kernel - INFO - Calling CommercialLoanPlugin-validate_application function with args: {"application_data":"APP_1752754546032_qfr1ta"}
+2025-07-25 16:06:24,364 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoanPlugin-validate_application invoking.
+2025-07-25 16:06:24,364 - __main__ - INFO - validate_application called with application_data: APP_1752754546032_qfr1ta...
+2025-07-25 16:06:24,365 - __main__ - INFO - Creating LLM service for application validation
+2025-07-25 16:06:25,161 - __main__ - INFO - Created validation prompt, calling LLM service...
+2025-07-25 16:06:25,161 - __main__ - ERROR - LLM service call failed: 'NoneType' object has no attribute 'pack_extension_data'
+2025-07-25 16:06:25,161 - __main__ - INFO - validate_application completed successfully
+2025-07-25 16:06:25,162 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoanPlugin-validate_application succeeded.
+2025-07-25 16:06:25,162 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.797753s
+2025-07-25 16:06:26,039 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:26,042 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=58, prompt_tokens=252, total_tokens=310, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:26,043 - semantic_kernel.functions.kernel_function - INFO - Function mcp-CommercialLoanAgent succeeded.
+2025-07-25 16:06:26,044 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 3.036228s
+2025-07-25 16:06:28,203 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:06:28,209 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('CommercialLoanAgent', {'messages': 'Perform a credit check for the customer with application_id: APP_1752754546032_qfr1ta.'})
+2025-07-25 16:06:28,210 - semantic_kernel.functions.kernel_function - INFO - Function mcp-CommercialLoanAgent invoking.
+2025-07-25 16:06:28,876 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:28,878 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=38, prompt_tokens=173, total_tokens=211, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:28,878 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:06:28,879 - semantic_kernel.kernel - INFO - Calling CommercialLoanPlugin-get_credit_score function with args: {"application_data":"{\"application_id\": \"APP_1752754546032_qfr1ta\"}"}
+2025-07-25 16:06:28,880 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoanPlugin-get_credit_score invoking.
+2025-07-25 16:06:28,881 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoanPlugin-get_credit_score succeeded.
+2025-07-25 16:06:28,881 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.000745s
+2025-07-25 16:06:29,615 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:06:29,617 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=45, prompt_tokens=223, total_tokens=268, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:06:29,617 - semantic_kernel.functions.kernel_function - INFO - Function mcp-CommercialLoanAgent succeeded.
+2025-07-25 16:06:29,618 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.406916s
+2025-07-25 16:06:38,603 - __main__ - INFO - STDIO server completed
+2025-07-25 16:08:07,536 - __main__ - INFO - Commercial Loan Agent starting up...
+2025-07-25 16:08:07,536 - __main__ - INFO - Parsed arguments - transport: stdio, port: None
+2025-07-25 16:08:07,546 - __main__ - INFO - Starting Commercial Loan Agent with transport: stdio
+2025-07-25 16:08:07,547 - __main__ - INFO - Creating ChatCompletionAgent...
+2025-07-25 16:08:08,087 - __main__ - INFO - Creating MCP server from agent...
+2025-07-25 16:08:08,922 - __main__ - INFO - Starting STDIO server...
+2025-07-25 16:08:08,923 - __main__ - INFO - Setting up STDIO connection...
+2025-07-25 16:08:08,924 - __main__ - INFO - STDIO server ready, running MCP server...
+2025-07-25 16:08:08,945 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-07-25 16:08:08,953 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2025-07-25 16:08:08,957 - mcp.server.lowlevel.server - INFO - Processing request of type SetLevelRequest
+2025-07-25 16:08:08,958 - semantic_kernel.connectors.mcp - DEBUG - Log level set to debug
+2025-07-25 16:08:21,903 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:08:21,910 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('CommercialLoanAgent', {'messages': "Validate the application for the commercial loan with application_id 'APP_1752754546032_qfr1ta'. Please perform a validation of the input data from the customer."})
+2025-07-25 16:08:21,913 - semantic_kernel.functions.kernel_function - INFO - Function mcp-CommercialLoanAgent invoking.
+2025-07-25 16:08:23,027 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:23,038 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=38, prompt_tokens=185, total_tokens=223, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:08:23,039 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:08:23,040 - semantic_kernel.kernel - INFO - Calling CommercialLoanPlugin-validate_application function with args: {"application_data":"{\"application_id\": \"APP_1752754546032_qfr1ta\"}"}
+2025-07-25 16:08:23,043 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoanPlugin-validate_application invoking.
+2025-07-25 16:08:23,044 - __main__ - INFO - validate_application called with application_data: {"application_id": "APP_1752754546032_qfr1ta"}...
+2025-07-25 16:08:23,044 - __main__ - INFO - Creating LLM service for application validation
+2025-07-25 16:08:23,712 - __main__ - INFO - Created validation prompt, calling LLM service...
+2025-07-25 16:08:23,713 - __main__ - ERROR - LLM service call failed: 'NoneType' object has no attribute 'pack_extension_data'
+2025-07-25 16:08:23,713 - __main__ - INFO - validate_application completed successfully
+2025-07-25 16:08:23,713 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoanPlugin-validate_application succeeded.
+2025-07-25 16:08:23,714 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.669906s
+2025-07-25 16:08:24,749 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:24,752 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=68, prompt_tokens=276, total_tokens=344, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:08:24,753 - semantic_kernel.functions.kernel_function - INFO - Function mcp-CommercialLoanAgent succeeded.
+2025-07-25 16:08:24,753 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 2.839853s
+2025-07-25 16:08:29,773 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:08:29,781 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('CommercialLoanAgent', {'messages': "Perform a credit check for the commercial loan application with application_id 'APP_1752754546032_qfr1ta'."})
+2025-07-25 16:08:29,782 - semantic_kernel.functions.kernel_function - INFO - Function mcp-CommercialLoanAgent invoking.
+2025-07-25 16:08:30,804 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:30,807 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=38, prompt_tokens=175, total_tokens=213, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:08:30,808 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:08:30,809 - semantic_kernel.kernel - INFO - Calling CommercialLoanPlugin-get_credit_score function with args: {"application_data":"{\"application_id\": \"APP_1752754546032_qfr1ta\"}"}
+2025-07-25 16:08:30,810 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoanPlugin-get_credit_score invoking.
+2025-07-25 16:08:30,810 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoanPlugin-get_credit_score succeeded.
+2025-07-25 16:08:30,811 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.000584s
+2025-07-25 16:08:31,496 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:08:31,498 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=43, prompt_tokens=225, total_tokens=268, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:08:31,499 - semantic_kernel.functions.kernel_function - INFO - Function mcp-CommercialLoanAgent succeeded.
+2025-07-25 16:08:31,500 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 1.717177s
+2025-07-25 16:08:38,439 - __main__ - INFO - STDIO server completed
+2025-07-25 16:20:58,028 - __main__ - INFO - Commercial Loan Agent starting up...
+2025-07-25 16:20:58,036 - __main__ - INFO - Parsed arguments - transport: stdio, port: None
+2025-07-25 16:20:58,083 - __main__ - INFO - Starting Commercial Loan Agent with transport: stdio
+2025-07-25 16:20:58,083 - __main__ - INFO - Creating ChatCompletionAgent...
+2025-07-25 16:20:59,066 - __main__ - INFO - Creating MCP server from agent...
+2025-07-25 16:21:04,374 - __main__ - INFO - Starting STDIO server...
+2025-07-25 16:21:04,374 - __main__ - INFO - Setting up STDIO connection...
+2025-07-25 16:21:04,375 - __main__ - INFO - STDIO server ready, running MCP server...
+2025-07-25 16:21:04,394 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2025-07-25 16:21:04,404 - mcp.server.lowlevel.server - INFO - Processing request of type ListPromptsRequest
+2025-07-25 16:21:04,410 - mcp.server.lowlevel.server - INFO - Processing request of type SetLevelRequest
+2025-07-25 16:21:04,411 - semantic_kernel.connectors.mcp - DEBUG - Log level set to debug
+2025-07-25 16:21:30,412 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:21:30,415 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('CommercialLoanAgent', {'messages': 'Validate Loan Application: Check if the application contains required information for application_id: APP_1752754546032_qfr1ta.'})
+2025-07-25 16:21:30,417 - semantic_kernel.functions.kernel_function - INFO - Function mcp-CommercialLoanAgent invoking.
+2025-07-25 16:21:31,401 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:31,411 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=31, prompt_tokens=177, total_tokens=208, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:21:31,412 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:21:31,413 - semantic_kernel.kernel - INFO - Calling CommercialLoanPlugin-validate_application function with args: {"application_data":"APP_1752754546032_qfr1ta"}
+2025-07-25 16:21:31,417 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoanPlugin-validate_application invoking.
+2025-07-25 16:21:31,418 - __main__ - INFO - validate_application called with application_data: APP_1752754546032_qfr1ta...
+2025-07-25 16:21:31,418 - __main__ - INFO - Creating LLM service for application validation
+2025-07-25 16:21:31,974 - __main__ - INFO - Created validation prompt, calling LLM service...
+2025-07-25 16:21:31,974 - __main__ - ERROR - LLM service call failed: 'NoneType' object has no attribute 'pack_extension_data'
+2025-07-25 16:21:31,974 - __main__ - INFO - validate_application completed successfully
+2025-07-25 16:21:31,975 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoanPlugin-validate_application succeeded.
+2025-07-25 16:21:31,975 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.557049s
+2025-07-25 16:21:32,977 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:32,981 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=59, prompt_tokens=256, total_tokens=315, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:21:32,983 - semantic_kernel.functions.kernel_function - INFO - Function mcp-CommercialLoanAgent succeeded.
+2025-07-25 16:21:32,983 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 2.566249s
+2025-07-25 16:21:37,473 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2025-07-25 16:21:37,480 - semantic_kernel.connectors.mcp - DEBUG - Calling tool with args: ('CommercialLoanAgent', {'messages': 'Credit Check: Perform a credit check on the customer associated with application_id APP_1752754546032_qfr1ta.'})
+2025-07-25 16:21:37,481 - semantic_kernel.functions.kernel_function - INFO - Function mcp-CommercialLoanAgent invoking.
+2025-07-25 16:21:38,867 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:38,869 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=37, prompt_tokens=176, total_tokens=213, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:21:38,870 - semantic_kernel.connectors.ai.chat_completion_client_base - INFO - processing 1 tool calls in parallel.
+2025-07-25 16:21:38,871 - semantic_kernel.kernel - INFO - Calling CommercialLoanPlugin-get_credit_score function with args: {"application_data":"{\"application_id\":\"APP_1752754546032_qfr1ta\"}"}
+2025-07-25 16:21:38,872 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoanPlugin-get_credit_score invoking.
+2025-07-25 16:21:38,873 - semantic_kernel.functions.kernel_function - INFO - Function CommercialLoanPlugin-get_credit_score succeeded.
+2025-07-25 16:21:38,873 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 0.000571s
+2025-07-25 16:21:39,680 - httpx - INFO - HTTP Request: POST https://cnt-foundry-demo.cognitiveservices.azure.com/openai/deployments/gpt-4.1/chat/completions?api-version=2024-12-01-preview "HTTP/1.1 200 OK"
+2025-07-25 16:21:39,683 - semantic_kernel.connectors.ai.open_ai.services.open_ai_handler - INFO - OpenAI usage: CompletionUsage(completion_tokens=47, prompt_tokens=225, total_tokens=272, completion_tokens_details=CompletionTokensDetails(accepted_prediction_tokens=0, audio_tokens=0, reasoning_tokens=0, rejected_prediction_tokens=0), prompt_tokens_details=PromptTokensDetails(audio_tokens=0, cached_tokens=0))
+2025-07-25 16:21:39,684 - semantic_kernel.functions.kernel_function - INFO - Function mcp-CommercialLoanAgent succeeded.
+2025-07-25 16:21:39,685 - semantic_kernel.functions.kernel_function - INFO - Function completed. Duration: 2.203420s
+2025-07-25 16:21:46,265 - __main__ - INFO - STDIO server completed
