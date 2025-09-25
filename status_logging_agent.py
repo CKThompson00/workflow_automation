@@ -86,8 +86,8 @@ class StatusLoggingPlugin:
             'DRIVER={ODBC Driver 17 for SQL Server};'
             'SERVER=cnt-demo-db.database.windows.net;'  # Replace with your server name
             'DATABASE=workflowdb;'  # Replace with your database name
-            'UID=chthomp;'  # Replace with your username
-            'PWD=Punkinhead!0;'  # Replace with your password
+            'UID=;'  # Replace with your username
+            'PWD=;'  # Replace with your password
         )
 
         # Establish a connection to the database
